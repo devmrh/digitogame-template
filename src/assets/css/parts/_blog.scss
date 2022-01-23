@@ -1,0 +1,173 @@
+.blog {
+    margin-bottom: 50px;
+    &--mb0
+    {
+        margin-bottom: 0;
+    }
+    &__wrapper {
+        &__slider {
+            &__item {
+                position: relative;
+                $item: &;
+                &__image {
+                    height: 265px;
+                    a {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+                &__text {
+                    @include absolute(f,8px,8px,8px);
+                    background-color: $navy-blue;
+                    border-radius: 15px;
+                    padding: 13px;
+                    &__avatar {
+                        @include absolute(-27px,50%,f,f);
+                        transform: translateX(50%);
+                        width: 55px;
+                        height: 55px;
+                        a {
+                            display: flex;
+                            width: 100%;
+                                height: 100%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                    &__title {
+                        display: flex;
+                        justify-content: center;
+                        line-height: 20px;
+                        margin-bottom: 14px;
+                        a {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-size: 13.5px;
+                            font-weight: 400;
+                            color: #fff;
+                        }
+                    }
+                    &__info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        &__discount {
+                            span {
+                                display: flex;
+                                font-size: 10px;
+                                font-weight: 400;
+                                color: #a7a2c0;
+                                line-height: 15px;
+                            }
+                        }
+                        &__price {
+                            span {
+                                display: flex;
+                                color: $green2;
+                                font-size: 13px;
+                                font-weight: 500;
+                                line-height: 15px;
+                            }
+                        }
+                        &__number
+                        {
+                            span
+                            {
+                                font-size: 35px;
+                                color: #38344E;
+                                font-weight: 600;
+                                line-height: 44px
+                            }
+                        }
+                    }
+                }
+                &__date {
+                    @include absolute(12px, f, f, 12px);
+                    z-index: 99;
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(6px);
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    span {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #fff;
+                        line-height: 31px;
+                        display: flex;
+                    }
+                    small {
+                        font-size: 12px;
+                        font-size: 500;
+                        color: #fff;
+                        line-height: 18px;
+                        display: flex;
+                    }
+                }
+                &--modifier
+                {
+                    #{$item}__image
+                    {
+                        height:285px;
+                    }
+                    #{$item}__text
+                    {
+                        padding: 13px 13px 2px 13px;
+                        &__title
+                        {
+                            margin-top:27px;
+                            line-height: 18px;
+                            margin-bottom:6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:992px)
+{
+    .blog{
+        &--mb
+        {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+@media(max-width:768px)
+{
+    .blog{
+        &--mb
+        {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media(max-width:576px)
+{
+    .blog
+    {
+        margin-bottom: 30px;
+        &--mb
+        {
+            margin-bottom: 30px;
+        }
+    }
+}

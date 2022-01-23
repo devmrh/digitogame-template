@@ -1,0 +1,113 @@
+.sec-title {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    $sec-title:&;
+    &__caption {
+        position: relative;
+        padding-right: 10px;
+        &::before {
+            content: "";
+            @include absolute(0, 0, 0, f);
+            border-right: 5px solid $green1;
+            border-radius: 10px 0 0 10px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 28px;
+            > span {
+                color: $green;
+                margin-right: 1px;
+            }
+        }
+        > span {
+            font-size: 12px;
+            font-weight: 400;
+            color: $light-green;
+            line-height: 18px;
+        }
+    }
+    &__timer {
+        > span {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin: 0 -5px;
+            .div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color:$navy-blue;
+                border-radius: 10px;
+                width: 40px;
+                height: 59px;
+                margin:0 5px;
+                &:first-child {
+                    background-color: #2bffd9;
+                    span {
+                        color: #16122b;
+                    }
+                }
+            }
+            span {
+                font-size: 17px;
+                font-weight: 700;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 10px 5px 10px;
+                &:last-child {
+                    font-size: 10px;
+                    color: #cdcdcd;
+                }
+            }
+        }
+    }
+    &--yellow
+    {
+        #{$sec-title}__caption
+        {
+            &::before {
+                border-color: $yellow2;
+            }
+           p
+           {
+            span
+            {
+                color:$yellow2;
+            }
+           }
+        }
+    }
+}
+
+@media(max-width:576px)
+{
+    .sec-title
+    {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:480px)
+{
+    .sec-title
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        &__timer
+        {
+            margin-top: 30px;
+            span
+            {
+                margin: 0;
+            }
+        }
+    }
+}

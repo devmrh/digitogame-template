@@ -1,0 +1,163 @@
+.search-result-header {
+    margin-top: 70px;
+    &__wrapper {
+        background-color: #0e0c23;
+        padding: 50px 44px 90px 44px;
+        border-radius: 20px;
+        background-image: url("../img/bg-header-search-result.svg"), url("../img/search-status.svg");
+        background-position: top right, bottom left;
+        background-repeat: no-repeat;
+        margin-bottom: -35px;
+        display: flex;
+        justify-content: space-between;
+        &--bg {
+            background-image: url("../img/bg-header-search-result.svg"), url("../img/clock.svg");
+            background-position: top right, top left;
+        }
+        &__text {
+            &__title {
+                margin-bottom: 12px;
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: #fff;
+                    span {
+                        margin-right: 3px;
+                        &.green {
+                            color: $green2;
+                        }
+                        &.red {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            &__desc {
+                p {
+                    font-size: 25px;
+                    font-weight: 400;
+                    color: #d7d8f3;
+                    span {
+                        color: $yellow1;
+                        margin: 0 3px;
+                    }
+                }
+            }
+        }
+        &__timer {
+            .sec-title {
+                margin-bottom: 0;
+                &__timer {
+                    > span {
+                        .div {
+                            background-color: #ffffff1a;
+                            width: 65px;
+                            height: 110px;
+                            &:first-child {
+                                background-color: #2bffd9;
+                                span {
+                                    color: #16122b;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .search-result-header {
+        &__wrapper {
+            &__text {
+                &__title {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+                &__desc {
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .search-result-header {
+        &__wrapper {
+            padding: 50px 44px 60px 44px;
+            &__text {
+                &__title {
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+                &__desc {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &__timer {
+                .sec-title {
+                    margin-bottom: 0;
+                    &__timer {
+                        > span {
+                            .div {
+                                width: 40px;
+                                height: 59px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .search-result-header {
+        &__wrapper {
+            padding:20px 15px 60px 15px;
+            flex-direction: column;
+            align-items: center;
+            &__timer
+            {
+               .sec-title
+               {
+                   &__timer
+                   {
+                        margin-top: 30px;
+                   }
+               }
+            }
+            &__text
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &__desc
+                {
+                    p
+                    {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .search-result-header {
+        &__wrapper {
+            background-image: none;
+        }
+    }
+}

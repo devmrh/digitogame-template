@@ -1,0 +1,873 @@
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/dana/eot/dana-fanum-thin.eot');
+	src: url('../fonts/dana/eot/dana-fanum-thin.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../fonts/dana/eot/dana-fanum-extralight.eot');
+	src: url('../fonts/dana/eot/dana-fanum-extralight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-extralight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-extralight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/dana/eot/dana-fanum-light.eot');
+	src: url('../fonts/dana/eot/dana-fanum-light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/dana/eot/dana-fanum-medium.eot');
+	src: url('../fonts/dana/eot/dana-fanum-medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/dana/eot/dana-fanum-demibold.eot');
+	src: url('../fonts/dana/eot/dana-fanum-demibold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-demibold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-demibold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 750;
+	src: url('../fonts/dana/eot/dana-fanum-ultrabold.eot');
+	src: url('../fonts/dana/eot/dana-fanum-ultrabold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-ultrabold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-ultrabold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/dana/eot/dana-fanum-extrabold.eot');
+	src: url('../fonts/dana/eot/dana-fanum-extrabold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-extrabold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-extrabold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 900;
+	src: url('../fonts/dana/eot/dana-fanum-black.eot');
+	src: url('../fonts/dana/eot/dana-fanum-black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/dana/eot/dana-fanum-bold.eot');
+	src: url('../fonts/dana/eot/dana-fanum-bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/dana/eot/dana-fanum-regular.eot');
+	src: url('../fonts/dana/eot/dana-fanum-regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+
+/**
+Iranic fonts	
+**/
+
+
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 10;
+	src: url('../fonts/dana/eot/dana-fanum-thinitalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-thinitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-thinitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-thinitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 200;
+	src: url('../fonts/dana/eot/dana-fanum-extralightitalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-extralightitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-extralightitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-extralightitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 300;
+	src: url('../fonts/dana/eot/dana-fanum-lightitalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-lightitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-lightitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-lightitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 500;
+	src: url('../fonts/dana/eot/dana-fanum-mediumitalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-mediumitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-mediumitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-mediumitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 600;
+	src: url('../fonts/dana/eot/dana-fanum-demibolditalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-demibolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-demibolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-demibolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 700;
+	src: url('../fonts/dana/eot/dana-fanum-ultrabolditalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-ultrabolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-ultrabolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-ultrabolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 800;
+	src: url('../fonts/dana/eot/dana-fanum-extrabolditalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-extrabolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-extrabolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-extrabolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 900;
+	src: url('../fonts/dana/eot/dana-fanum-blackitalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-blackitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-blackitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-blackitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: bold;
+	src: url('../fonts/dana/eot/dana-fanum-bolditalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-bolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-bolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-bolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: normal;
+	src: url('../fonts/dana/eot/dana-fanum-regularitalic.eot');
+	src: url('../fonts/dana/eot/dana-fanum-regularitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/dana/woff2/dana-fanum-regularitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/dana/woff/dana-fanum-regularitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: 'icon';
+  src:  url('../fonts/icon/icon.eot?po8p9a');
+  src:  url('../fonts/icon/icon.eot?po8p9a#iefix') format('embedded-opentype'),
+    url('../fonts/icon/icon.ttf?po8p9a') format('truetype'),
+    url('../fonts/icon/icon.woff?po8p9a') format('woff'),
+    url('../fonts/icon/icon.svg?po8p9a#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="dn-"], [class*=" dn-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dn-message-question .path1:before {
+  content: "\e97b";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-message-question .path2:before {
+  content: "\e97c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-message-question .path3:before {
+  content: "\e97d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-shopping-cart .path1:before {
+  content: "\e97e";
+  color: rgb(41, 45, 50);
+}
+.dn-shopping-cart .path2:before {
+  content: "\e97f";
+  margin-left: -1em;
+  color: rgb(41, 45, 50);
+}
+.dn-shopping-cart .path3:before {
+  content: "\e980";
+  margin-left: -1em;
+  color: rgb(41, 45, 50);
+  opacity: 0.4;
+}
+.dn-shopping-cart .path4:before {
+  content: "\e981";
+  margin-left: -1em;
+  color: rgb(41, 45, 50);
+}
+.dn-more .path1:before {
+  content: "\e982";
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.dn-more .path2:before {
+  content: "\e983";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-more .path3:before {
+  content: "\e984";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.dn-arrow-down .path1:before {
+  content: "\e96d";
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-arrow-down .path2:before {
+  content: "\e96e";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-arrow-top .path1:before {
+  content: "\e96f";
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-arrow-top .path2:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-copy .path1:before {
+  content: "\e971";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-copy .path2:before {
+  content: "\e972";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-copy .path3:before {
+  content: "\e973";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-quote-down .path1:before {
+  content: "\e974";
+  color: rgb(0, 255, 209);
+}
+.dn-quote-down .path2:before {
+  content: "\e975";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-quote-top .path1:before {
+  content: "\e976";
+  color: rgb(0, 255, 209);
+}
+.dn-quote-top .path2:before {
+  content: "\e977";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-minus:before {
+  content: "\e978";
+  color: #fd6b63;
+}
+.dn-plus:before {
+  content: "\e979";
+  color: #00ffd1;
+}
+.dn-close:before {
+  content: "\e97a";
+  color: #fff;
+}
+.dn-monitor .path1:before {
+  content: "\e965";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-monitor .path2:before {
+  content: "\e966";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-cards .path1:before {
+  content: "\e967";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-cards .path2:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-cards .path3:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-cards .path4:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-cards .path5:before {
+  content: "\e96b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-origin:before {
+  content: "\e96c";
+  color: #fff;
+}
+.dn-instagram .path1:before {
+  content: "\e948";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-instagram .path2:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-instagram .path3:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-stim .path1:before {
+  content: "\e944";
+  color: rgb(255, 255, 255);
+}
+.dn-stim .path2:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(19, 18, 39);
+}
+.dn-xbox:before {
+  content: "\e946";
+  color: #fff;
+}
+.dn-play-station:before {
+  content: "\e947";
+  color: #fff;
+}
+.dn-smille:before {
+  content: "\e931";
+  color: #fff;
+}
+.dn-dislike .path1:before {
+  content: "\e932";
+  color: rgb(253, 107, 99);
+  opacity: 0.4;
+}
+.dn-dislike .path2:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(253, 107, 99);
+}
+.dn-like .path1:before {
+  content: "\e934";
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-like .path2:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-email .path1:before {
+  content: "\e942";
+  color: rgb(19, 17, 41);
+  opacity: 0.4;
+}
+.dn-email .path2:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(19, 17, 41);
+}
+.dn-call .path1:before {
+  content: "\e936";
+  color: rgb(19, 17, 41);
+  opacity: 0.4;
+}
+.dn-call .path2:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(19, 17, 41);
+}
+.dn-location .path1:before {
+  content: "\e938";
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-location .path2:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-timer .path1:before {
+  content: "\e93a";
+  color: rgb(9, 7, 31);
+  opacity: 0.4;
+}
+.dn-timer .path2:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(9, 7, 31);
+}
+.dn-timer .path3:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(9, 7, 31);
+}
+.dn-copyright:before {
+  content: "\e922";
+  color: #fff;
+}
+.dn-arrow-up .path1:before {
+  content: "\e923";
+  color: rgb(0, 255, 209);
+}
+.dn-arrow-up .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-facebook .path1:before {
+  content: "\e93d";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-facebook .path2:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-google .path1:before {
+  content: "\e93f";
+  color: rgb(255, 255, 255);
+}
+.dn-google .path2:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-google .path3:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-arrow-right .path1:before {
+  content: "\e925";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-arrow-right .path2:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-arrow-left .path1:before {
+  content: "\e927";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-arrow-left .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-daler:before {
+  content: "\e929";
+  color: #fff;
+}
+.dn-call-incoming .path1:before {
+  content: "\e94b";
+  color: rgb(0, 255, 209);
+}
+.dn-call-incoming .path2:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-call-incoming .path3:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-danger .path1:before {
+  content: "\e94e";
+  color: rgb(231, 253, 99);
+  opacity: 0.4;
+}
+.dn-danger .path2:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(231, 253, 99);
+}
+.dn-danger .path3:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(231, 253, 99);
+}
+.dn-emoji-happy .path1:before {
+  content: "\e951";
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-emoji-happy .path2:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-emoji-happy .path3:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-emoji-happy .path4:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-scan .path1:before {
+  content: "\e955";
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-scan .path2:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-scan .path3:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-scan .path4:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-scan .path5:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-scan .path6:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+}
+.dn-scan .path7:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(0, 255, 209);
+  opacity: 0.4;
+}
+.dn-sound .path1:before {
+  content: "\e95c";
+  color: rgb(231, 253, 99);
+}
+.dn-sound .path2:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(231, 253, 99);
+  opacity: 0.4;
+}
+.dn-sound .path3:before {
+  content: "\e95e";
+  margin-left: -1em;
+  color: rgb(231, 253, 99);
+}
+.dn-sound .path4:before {
+  content: "\e95f";
+  margin-left: -1em;
+  color: rgb(231, 253, 99);
+  opacity: 0.4;
+}
+.dn-sound .path5:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(231, 253, 99);
+}
+.dn-notification .path1:before {
+  content: "\e920";
+  color: rgb(42, 255, 217);
+}
+.dn-notification .path2:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-cart .path1:before {
+  content: "\e900";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-cart .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-book .path1:before {
+  content: "\e902";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-book .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-book .path3:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-book .path4:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-category .path1:before {
+  content: "\e906";
+  color: rgb(255, 255, 255);
+}
+.dn-category .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-category .path3:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-category .path4:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-favorite-chart .path1:before {
+  content: "\e90a";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-favorite-chart .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-favorite-chart .path3:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-game .path1:before {
+  content: "\e90d";
+  color: rgb(255, 255, 255);
+}
+.dn-game .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-game .path3:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-game .path4:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-game .path5:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-game .path6:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-game .path7:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-download:before {
+  content: "\e914";
+  color: #00ffd1;
+}
+.dn-headphone .path1:before {
+  content: "\e915";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-headphone .path2:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-headphone .path3:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-search .path1:before {
+  content: "\e918";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-search .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-telegram .path1:before {
+  content: "\e91a";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-telegram .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-telegram .path3:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-strongbox .path1:before {
+  content: "\e91d";
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-strongbox .path2:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-strongbox .path3:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-tv .path1:before {
+  content: "\e92a";
+  color: rgb(255, 255, 255);
+}
+.dn-tv .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-tv .path3:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-tv .path4:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-tv .path5:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-tv .path6:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  opacity: 0.4;
+}
+.dn-tv .path7:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.dn-emoji-sad .path1:before {
+  content: "\e961";
+  color: rgb(253, 107, 99);
+  opacity: 0.4;
+}
+.dn-emoji-sad .path2:before {
+  content: "\e962";
+  margin-left: -1em;
+  color: rgb(253, 107, 99);
+}
+.dn-emoji-sad .path3:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: rgb(253, 107, 99);
+}
+.dn-emoji-sad .path4:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(253, 107, 99);
+}

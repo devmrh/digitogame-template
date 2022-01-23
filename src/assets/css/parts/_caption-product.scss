@@ -1,0 +1,90 @@
+.caption-product {
+    margin-bottom: 60px;
+    &__wrapper {
+        &__title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 27px;
+                height: 27px;
+                font-size: 16px;
+                background-color: #2e6fd7;
+                box-shadow: 0 10px 45px 10px rgba(26, 26, 255, 0.15);
+                border-radius: 20px 20px 0 20px;
+                margin-left: 13px;
+            }
+            h3 {
+                font-size: 18px;
+                font-weight: 300;
+                color: #fff;
+                line-height: 27px;
+            }
+        }
+        &__content {
+            background-color: rgba(37, 34, 58, 0.8);
+            border-radius: 20px;
+            padding: 38px 23px 40px 23px;
+            text-align: center;
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                color: $green2;
+                line-height: 32px;
+                margin-bottom: 18px;
+                margin-top: 60px;
+                &:first-child
+                {
+                    margin-top: 0;
+                }
+            }
+            p {
+                font-size: 17px;
+                font-weight: 300;
+                color: #fff;
+                line-height: 26px;
+                margin-bottom: 30px;
+                &:last-child
+                {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px)
+{
+    .caption-product
+    {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:576px)
+{
+    .caption-product
+    {
+        margin-bottom: 30px;
+        &__wrapper
+        {
+            &__content
+            {
+                padding: 20px 15px;
+                h3
+                {
+                    font-size: 17px;
+                    margin-top: 40px;
+                }
+                p
+                {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

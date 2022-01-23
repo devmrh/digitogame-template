@@ -1,0 +1,229 @@
+.application {
+    margin-bottom: 50px;
+    &__wrapper {
+        display: flex;
+        background-color: $navy-blue;
+        border-radius: 20px;
+        padding: 32px 40px 32px 40px;
+        background-image: url("../img/bg-left-app.svg"),url("../img/bg-right-app.svg"),url("../img/bg-center-app.svg");
+        background-position:top left,top right,top center;
+        background-repeat: no-repeat,no-repeat,no-repeat;
+        background-size:200px,297px,637px;
+        &__image {
+            flex: 0 0 285px;
+            max-width: 285px;
+            margin-left: 40px;
+            img {
+                width: 100%;
+            }
+        }
+        &__text {
+            flex: 0 0 calc(100% - 480px);
+            max-width: calc(100% - 480px);
+            &__title {
+                margin-bottom: 16px;
+                h3 {
+                    font-size: 30px;
+                    font-weight: 800;
+                    color: #fff;
+                    line-height: 50px;
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+            &__desc {
+                p {
+                    font-size: 20px;
+                    line-height: 33px;
+                    color: #7c7892;
+                }
+            }
+        }
+        &__button {
+            flex: 0 0 100px;
+            max-width: 100px;
+            margin-right: 55px;
+            a {
+                transition: 0.3s;
+                padding: 28px 20px 23px 20px;
+                border: 1px solid $green2;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+                color: $green2;
+                line-height: 27px;
+                i {
+                    font-size: 37.5px;
+                    margin-bottom: 32px;
+                }
+                &:hover
+                {
+                    background-color: $green2;
+                    color: #000;
+                    i
+                    {
+                        &::before {
+                            color: #0F1929;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    .application {
+        &__wrapper {
+            &__text {
+                &__title {
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1670px) {
+    .application {
+        &__wrapper {
+            background-size:200px,387px,315px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .application {
+        &__wrapper {
+            &__image {
+                margin-left: 20px;
+            }
+            &__text {
+                flex: 0 0 calc(100% - 425px);
+                max-width: calc(100% - 425px);
+                &__title {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+                &__desc {
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+            &__button {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .application {
+        &__wrapper {
+            background-size:200px,387px,0;
+            padding:20px;
+            &__image {
+                flex: 0 0 200px;
+                max-width: 200px;
+            }
+            &__text {
+                flex: 0 0 calc(100% - 320px);
+                max-width: calc(100% - 320px);
+                &__title {
+                    h3 {
+                        font-size: 17px;
+                    }
+                }
+                &__desc {
+                    font-size: 14px;
+                }
+            }
+            &__button {
+                flex: 0 0 80px;
+                max-width: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .application {
+        &__wrapper {
+            background-size:200px,0;
+            flex-wrap: wrap;
+            &__image {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                img {
+                    width: unset;
+                    height: unset;
+                }
+            }
+            &__text {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+                &__title
+                {
+                    h3
+                    {
+                        line-height: 35px;
+                        font-size: 15px;
+                    }
+                }
+            }
+            &__button {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-right: 0;
+                display: flex;
+                justify-content: center;
+                a {
+                    display: flex;
+                    padding: 10px 15px;
+                    font-size: 15px;
+                    i
+                    {
+                        margin-bottom:10px;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px)
+{
+    .application
+    {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:480px)
+{
+    .application
+    {
+        &__wrapper
+        {
+            background-size:110px,0;
+        }
+    }
+}

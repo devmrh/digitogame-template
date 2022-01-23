@@ -1,0 +1,59 @@
+@import "../../../node_modules/@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min";
+@import "../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min";
+@import "../../../node_modules/swiper/swiper-bundle.min";
+@import "../../../node_modules/toastr/build/toastr.min";
+
+
+@import "parts/base/fonts";
+@import "parts/base/base";
+@import "parts/base/mixins";
+@import "parts/base/colors";
+@import "parts/base/grid";
+@import "parts/base/form";
+@import "parts/search-mobile";
+
+//part
+@import "parts/header";
+@import "parts/footer";
+
+//index
+@import "parts/toolbar";
+@import "parts/toolbar-content";
+@import "parts/home-intro";
+@import "parts/sec-title";
+@import "parts/blog";
+@import "parts/game";
+@import "parts/comment";
+@import "parts/application";
+@import "parts/terms-content";
+@import "parts/blog-content";
+@import "parts/slidebar-blog";
+
+
+//login
+@import "parts/login";
+
+//contactus
+@import "parts/contactus";
+
+//single-product
+@import "parts/single-product-sidebar";
+@import "parts/gallery-product";
+@import "parts/property-product";
+@import "parts/caption-product";
+@import "parts/learn-inastallition";
+@import "parts/required-system";
+@import "parts/comments-user";
+
+//cat-product
+@import "parts/cat-product-sidebar";
+@import "parts/filter-product";
+@import "parts/product";
+@import "parts/pagination";
+
+//search-result
+@import "parts/search-result-header";
+
+//cart
+@import "parts/cart-sidebar";
+@import "parts/cart-context";
