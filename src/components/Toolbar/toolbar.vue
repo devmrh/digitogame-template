@@ -2,7 +2,7 @@
   <section class="toolbar">
     <div class="toolbar__wrapper">
       <div class="toolbar__wrapper__logo">
-        <router-link to="#"
+        <router-link to="/"
           ><i class="dn-tv"
             ><span class="path1"></span><span class="path2"></span
             ><span class="path3"></span><span class="path4"></span
@@ -12,11 +12,11 @@
       </div>
       <ul>
         <li :class="{ content: true, active: isActive }">
-          <router-link to="#" @click="clickOnContent"
+          <a href="#" @click="clickOnContent"
             ><i class="dn-category"
               ><span class="path1"></span><span class="path2"></span
               ><span class="path3"></span><span class="path4"></span> </i
-          ></router-link>
+          ></a>
         </li>
         <li>
           <router-link to="#"
@@ -107,7 +107,7 @@ export default {
           toolbar.style.paddingBottom = "50px";
           this.isClosing = false;
           this.swiper.update();
-          this.swiper.slideTo(0, 200, ()=>{});
+          this.swiper.slideTo(0, 200, () => {});
         }, 300);
       }
     },

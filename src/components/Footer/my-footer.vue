@@ -26,8 +26,10 @@
                 </div>
                 <div class="main-footer__wrapper__content__item__list">
                   <ul>
-                    <li><a href="#">پرسش های متدول</a></li>
+                    <li><a href="#">پرسش های متداول</a></li>
                     <li><a href="#">حریم خصوصی</a></li>
+                    <li><router-link to="contact-us">تماس با ما</router-link></li>
+
                     <li><a href="#">شکایات</a></li>
                     <li><a href="#">قوانین</a></li>
                   </ul>
@@ -116,7 +118,7 @@
             </p>
           </div>
           <div class="main-footer__wrapper__copyright__back-up">
-            <a href="#top"
+            <a href="#" @click="scrollToTop"
               ><i class="dn-arrow-up"
                 ><span class="path1"></span><span class="path2"></span
                 ><span class="path3"></span></i
@@ -133,12 +135,21 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import FooterSlide from "./footer-slide.vue";
-import image from "../assets/img/nemad.png";
+import image from "../../assets/img/nemad.png";
 
 SwiperCore.use([Navigation, Autoplay]);
 
 export default {
   components: { Swiper, SwiperSlide, FooterSlide },
+  methods: {
+    scrollToTop: function (e) {
+      e.preventDefault();
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
   data() {
     return {
       items: [

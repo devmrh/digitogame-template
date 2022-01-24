@@ -5,7 +5,8 @@
         <swiper @swiper="onSwiper" :spaceBetween="0" :slidesPerView="'auto'">
           <swiper-slide v-for="(item, i) in items" :key="i">
             <toolbar-content-slide
-              @reloadSwiper="reloadSwiper"
+              @click="onActiveSub(item.id)"
+              :isActive="getActiveSub(item.id)"
               v-if="!item.isSub"
               :icon="item.icon"
               :name="item.name"
@@ -14,6 +15,14 @@
               :items="item.items"
             >
             </toolbar-content-slide>
+            <toolbar-content-sub-slide
+              v-if="item.isSub"
+              :active="getActiveSub(item.id)"
+              :key="i"
+              :alt="item.alt"
+              :image="item.image"
+              :url="item.url"
+            ></toolbar-content-sub-slide>
           </swiper-slide>
         </swiper>
       </div>
@@ -37,50 +46,75 @@ export default {
 
   methods: {
     onSwiper: function (swiper) {
+      this.swiper = swiper;
       this.$emit("swiper", swiper);
+    },
+    onActiveSub: function (id) {
+      if (this.activeSub == id) {
+        this.activeSub = undefined;
+      } else {
+        this.activeSub = id;
+      }
+
+      setTimeout(() => {
+        this.swiper.update();
+      }, 301);
+    },
+    getActiveSub: function (id) {
+      return this.activeSub == id;
     },
   },
 
   data() {
     return {
       swiper: undefined,
+      activeSub: undefined,
       items: [
         {
+          id: 1,
           name: "ایکس باکس",
           icon: "dn-xbox",
           number: 130,
           isSub: false,
           url: "#",
-          items: [
-            {
-              image: image,
-              url: "#",
-              alt: "",
-            },
-            {
-              image: image2,
-              url: "#",
-              alt: "",
-            },
-            {
-              image: image3,
-              url: "#",
-              alt: "",
-            },
-            {
-              image: image4,
-              url: "#",
-              alt: "",
-            },
-            {
-              image: image5,
-              url: "#",
-              alt: "",
-            },
-          ],
         },
-
         {
+          id: 1,
+          isSub: true,
+          image: image,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 1,
+          isSub: true,
+          image: image2,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 1,
+          isSub: true,
+          image: image3,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 1,
+          isSub: true,
+          image: image4,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 1,
+          isSub: true,
+          image: image5,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 2,
           name: "پلی استیشن",
           icon: "dn-play-station",
           number: 85,
@@ -88,6 +122,7 @@ export default {
           url: "#",
         },
         {
+          id: 3,
           name: "استیم",
           icon: "dn-stim",
           number: 110,
@@ -95,11 +130,33 @@ export default {
           url: "#",
         },
         {
+          id: 4,
           name: "استیم",
           icon: "dn-stim",
           number: 130,
           isSub: false,
           url: "#",
+        },
+        {
+          id: 4,
+          isSub: true,
+          image: image,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 4,
+          isSub: true,
+          image: image2,
+          url: "#",
+          alt: "",
+        },
+        {
+          id: 4,
+          isSub: true,
+          image: image3,
+          url: "#",
+          alt: "",
         },
       ],
     };
