@@ -56,58 +56,6 @@
                         line-height: 20px;
                     }
                 }
-                &--green {
-                    background-color: $green2;
-                    border-color: $green2;
-                    #{$item} {
-                        &__icon {
-                            background-color: #131129;
-                        }
-                        &__text {
-                            h3,
-                            p {
-                                color: #000;
-                            }
-                        }
-                    }
-                }
-                &--yellow {
-                    border-color: $yellow;
-                    #{$item}__icon {
-                        background-color: $yellow;
-                    }
-                    #{$item}__text {
-                        color: $yellow;
-                    }
-                }
-                &--purple {
-                    border-color: $purple;
-                    #{$item}__icon {
-                        background-color: $purple;
-                    }
-                    #{$item}__text {
-                        h3 {
-                            color: $purple;
-                        }
-                        p {
-                            color: $purple;
-                        }
-                    }
-                }
-                &--red {
-                    border-color: #fd6b63;
-                    #{$item}__icon {
-                        background-color: #fd6b63;
-                    }
-                    #{$item}__text {
-                        h3 {
-                            color: #fd6b63;
-                        }
-                        p {
-                            color: #fd6b63;
-                        }
-                    }
-                }
             }
         }
         &__item {

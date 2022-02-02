@@ -2,10 +2,12 @@
   <section class="game inview">
     <div class="game__wrapper">
       <div class="sec-title">
-        <div class="sec-title__caption">
-          <p>کوپن و آیتم های بازیِ<span> دیجیتو گیم</span></p>
-          <span>مشاهده آرشیو</span>
-        </div>
+        <router-link to="cat-product">
+          <div class="sec-title__caption">
+            <p>کوپن و آیتم های بازیِ<span> دیجیتو گیم</span></p>
+            <span>مشاهده آرشیو</span>
+          </div>
+        </router-link>
       </div>
       <div class="game__wrapper__slider">
         <swiper

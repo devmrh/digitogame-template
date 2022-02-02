@@ -14,16 +14,15 @@
             input {
                 display: none;
                 &:checked {
-                   +label
-                   {
-                    background-color: $green2;
-                    color: #15122a;
-                
-                   }
+                    + label {
+                        background-color: $green2;
+                        color: #15122a;
+                    }
                 }
             }
             label {
                 cursor: pointer;
+                transition: 0.3s;
                 background-color: rgba(255, 255, 255, 0.05);
                 border-radius: 12px;
                 padding: 0 22px;
@@ -36,41 +35,34 @@
                 &:last-child {
                     margin-left: 0;
                 }
-            
-            }
-        }
-    }
-}
-
-@media(max-width:992px)
-{
-    .filter-product
-    {
-        &__wrapper
-        {
-            &__list
-            {
-                label
-                {
-                    margin-left: 5px;
-                    padding:0 15px;
+                &:hover {
+                    background-color: $green2;
+                    color: #15122a;
                 }
             }
         }
     }
 }
 
-@media(max-width:768px)
-{
-    .filter-product
-    {
+@media (max-width: 992px) {
+    .filter-product {
+        &__wrapper {
+            &__list {
+                label {
+                    margin-left: 5px;
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-product {
         margin-bottom: 40px;
-        &__wrapper
-        {
-            &__list
-            {
-                label
-                {
+        &__wrapper {
+            &__list {
+                label {
                     margin-bottom: 10px;
                     padding: 0 10px;
                 }
@@ -79,10 +71,8 @@
     }
 }
 
-@media(max-width:576px)
-{
-    .filter-product
-    {
+@media (max-width: 576px) {
+    .filter-product {
         margin-bottom: 20px;
     }
 }

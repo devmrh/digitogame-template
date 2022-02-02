@@ -1,7 +1,6 @@
 .blog {
     margin-bottom: 50px;
-    &--mb0
-    {
+    &--mb0 {
         margin-bottom: 0;
     }
     &__wrapper {
@@ -23,19 +22,19 @@
                     }
                 }
                 &__text {
-                    @include absolute(f,8px,8px,8px);
+                    @include absolute(f, 8px, 8px, 8px);
                     background-color: $navy-blue;
                     border-radius: 15px;
                     padding: 13px;
                     &__avatar {
-                        @include absolute(-27px,50%,f,f);
+                        @include absolute(-27px, 50%, f, f);
                         transform: translateX(50%);
                         width: 55px;
                         height: 55px;
                         a {
                             display: flex;
                             width: 100%;
-                                height: 100%;
+                            height: 100%;
                             img {
                                 width: 100%;
                                 height: 100%;
@@ -58,6 +57,24 @@
                             color: #fff;
                         }
                     }
+                    &__desc {
+                        height: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.3s;
+                        margin-top: 10px;
+                        p {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 13px;
+                            font-weight: 300;
+                            color: rgba(255, 255, 255, 0.4);
+                            line-height: 20px;
+                        }
+                    }
                     &__info {
                         display: flex;
                         align-items: center;
@@ -72,22 +89,38 @@
                             }
                         }
                         &__price {
-                            span {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            > span {
                                 display: flex;
                                 color: $green2;
                                 font-size: 13px;
                                 font-weight: 500;
                                 line-height: 15px;
                             }
+                            &__old {
+                                height: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                margin-bottom: 5px;
+                                transition: 0.3s;
+                                > span {
+                                    display: flex;
+                                    color: $red;
+                                    text-decoration: line-through;
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    line-height: 15px;
+                                }
+                            }
                         }
-                        &__number
-                        {
-                            span
-                            {
+                        &__number {
+                            span {
                                 font-size: 35px;
-                                color: #38344E;
+                                color: #38344e;
                                 font-weight: 600;
-                                line-height: 44px
+                                line-height: 44px;
                             }
                         }
                     }
@@ -118,20 +151,34 @@
                         display: flex;
                     }
                 }
-                &--modifier
-                {
-                    #{$item}__image
-                    {
-                        height:285px;
+                &--modifier {
+                    #{$item}__image {
+                        height: 285px;
                     }
-                    #{$item}__text
-                    {
+                    #{$item}__text {
                         padding: 13px 13px 2px 13px;
-                        &__title
-                        {
-                            margin-top:27px;
+                        &__title {
+                            margin-top: 27px;
                             line-height: 18px;
-                            margin-bottom:6px;
+                            margin-bottom: 6px;
+                        }
+                    }
+                }
+                &:hover {
+                    #{$item}__text {
+                        &__desc {
+                            height: 40px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        &__info {
+                            &__price {
+                                &__old {
+                                    height: 15px;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
                         }
                     }
                 }
@@ -140,33 +187,26 @@
     }
 }
 
-@media(max-width:992px)
-{
-    .blog{
-        &--mb
-        {
+@media (max-width: 992px) {
+    .blog {
+        &--mb {
             margin-bottom: 70px;
         }
     }
 }
 
-@media(max-width:768px)
-{
-    .blog{
-        &--mb
-        {
+@media (max-width: 768px) {
+    .blog {
+        &--mb {
             margin-bottom: 50px;
         }
     }
 }
 
-@media(max-width:576px)
-{
-    .blog
-    {
+@media (max-width: 576px) {
+    .blog {
         margin-bottom: 30px;
-        &--mb
-        {
+        &--mb {
             margin-bottom: 30px;
         }
     }

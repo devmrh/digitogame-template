@@ -5,10 +5,10 @@
         background-color: $navy-blue;
         border-radius: 20px;
         padding: 32px 40px 32px 40px;
-        background-image: url("../img/bg-left-app.svg"),url("../img/bg-right-app.svg"),url("../img/bg-center-app.svg");
-        background-position:top left,top right,top center;
-        background-repeat: no-repeat,no-repeat,no-repeat;
-        background-size:200px,297px,637px;
+        background-image: url("../img/bg-left-app.svg"), url("../img/bg-right-app.svg"), url("../img/bg-center-app.svg");
+        background-position: top left, top right, top center;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 200px, 297px, 637px;
         &__image {
             flex: 0 0 285px;
             max-width: 285px;
@@ -61,15 +61,18 @@
                 i {
                     font-size: 37.5px;
                     margin-bottom: 32px;
+                    transition: 0.3s;
+
+                    &::before {
+                        transition: 0.3s;
+                    }
                 }
-                &:hover
-                {
+                &:hover {
                     background-color: $green2;
                     color: #000;
-                    i
-                    {
+                    i {
                         &::before {
-                            color: #0F1929;
+                            color: #0f1929;
                         }
                     }
                 }
@@ -78,24 +81,10 @@
     }
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1670px) {
     .application {
         &__wrapper {
-            &__text {
-                &__title {
-                    h3 {
-                        font-size: 26px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:1670px) {
-    .application {
-        &__wrapper {
-            background-size:200px,387px,315px;
+            background-size: 200px, 387px, 315px;
         }
     }
 }
@@ -130,8 +119,8 @@
 @media (max-width: 992px) {
     .application {
         &__wrapper {
-            background-size:200px,387px,0;
-            padding:20px;
+            background-size: 200px, 387px, 0;
+            padding: 20px;
             &__image {
                 flex: 0 0 200px;
                 max-width: 200px;
@@ -159,7 +148,7 @@
 @media (max-width: 768px) {
     .application {
         &__wrapper {
-            background-size:200px,0;
+            background-size: 200px, 0;
             flex-wrap: wrap;
             &__image {
                 flex: 0 0 100%;
@@ -179,10 +168,8 @@
                 max-width: 100%;
                 text-align: center;
                 margin-bottom: 20px;
-                &__title
-                {
-                    h3
-                    {
+                &__title {
+                    h3 {
                         line-height: 35px;
                         font-size: 15px;
                     }
@@ -198,9 +185,8 @@
                     display: flex;
                     padding: 10px 15px;
                     font-size: 15px;
-                    i
-                    {
-                        margin-bottom:10px;
+                    i {
+                        margin-bottom: 10px;
                         font-size: 22px;
                     }
                 }
@@ -209,21 +195,16 @@
     }
 }
 
-@media(max-width:576px)
-{
-    .application
-    {
+@media (max-width: 576px) {
+    .application {
         margin-bottom: 30px;
     }
 }
 
-@media(max-width:480px)
-{
-    .application
-    {
-        &__wrapper
-        {
-            background-size:110px,0;
+@media (max-width: 480px) {
+    .application {
+        &__wrapper {
+            background-size: 110px, 0;
         }
     }
 }

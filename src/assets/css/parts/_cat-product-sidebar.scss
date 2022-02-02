@@ -45,6 +45,7 @@
                             align-items: center;
                             justify-content: space-between;
                             span {
+                                transition: 0.3s;
                                 color: #e9e7ff;
                                 font-size: 14px;
                                 font-weight: 400;
@@ -118,23 +119,44 @@
                         margin: 0 5px;
                         margin-bottom: 10px;
                         a {
+                            $item: &;
                             transition: 0.3s;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
                             background-color: rgba(255, 255, 255, 0.05);
+                            position: relative;
+                            &::before {
+                                content: "";
+                                background: linear-gradient(180deg, #fd6b63 0%, #df4d45 100%);
+                                transition: 0.3s;
+                                opacity: 0;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                left: 0;
+                                bottom: 0;
+                                z-index: 1;
+                                border-radius: 8px;
+                            }
+                            * {
+                                position: relative;
+                                z-index: 2;
+                            }
                             border-radius: 8px;
                             padding: 17px 5px 16px 5px;
                             font-size: 10px;
                             font-weight: 16px;
                             color: #fff;
-                            i {
+                            img {
                                 font-size: 35px;
                                 margin-bottom: 18px;
                             }
                             &:hover {
-                                background-color: #fd6b63;
+                                &::before {
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
@@ -201,14 +223,10 @@
     }
 }
 
-
-@media(max-width:1200px)
-{
-    .cat-product-sidebar
-    {
-        &__wrapper
-        {
-            padding:60px 15px 15px;
+@media (max-width: 1200px) {
+    .cat-product-sidebar {
+        &__wrapper {
+            padding: 60px 15px 15px;
             @include fixed(0, f, 0, -280px);
             background-color: #24223a;
             width: 280px;
@@ -241,42 +259,33 @@
                     transform: rotate(45deg);
                 }
             }
-            &__item
-            {
+            &__item {
                 background-color: transparent;
                 padding: 0;
-                &::before
-                {
+                &::before {
                     display: none;
                 }
             }
-            &__free-delivery
-            {
+            &__free-delivery {
                 display: none;
             }
         }
-        &__icon-filter
-        {
+        &__icon-filter {
             display: flex;
         }
     }
 }
 
-@media(max-width:768px)
-{
-    .cat-product-sidebar
-    {
-        &__icon-filter
-        {
+@media (max-width: 768px) {
+    .cat-product-sidebar {
+        &__icon-filter {
             bottom: 70px;
             left: 10px;
             width: 40px;
             height: 40px;
-            i
-            {
+            i {
                 font-size: 18px;
             }
-         
         }
     }
 }

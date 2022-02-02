@@ -1,0 +1,99 @@
+.content-user {
+    &__wrapper {
+        &__answer {
+            background: #25233b;
+            border-radius: 15px;
+            padding: 25px 26px 14px 20px;
+            &__top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 26px;
+                &__icon {
+                    i {
+                        opacity: 0.4;
+                        font-size: 48px;
+                    }
+                }
+                &__btn {
+                    span {
+                        display: block;
+                        font-weight: 300;
+                        font-size: 11px;
+                        line-height: 16px;
+                        text-align: center;
+
+                        color: #ffffff;
+                        text-align: end;
+                        color: #ffffff;
+                        &:first-child {
+                            margin-bottom: 9px;
+                        }
+                        &.color,
+                        &.color2,
+                        &.color3 {
+                            background: #2e6fd7;
+                            border-radius: 10px;
+                            line-height: 40px;
+                            padding: 0 16px;
+                        }
+                        &.color2 {
+                            background: #2aaf8f;
+                        }
+                        &.color3 {
+                            background: #fd6b63;
+                            color: #898894;
+                        }
+                    }
+                }
+            }
+            &__text {
+                span {
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #ffffff;
+                }
+            }
+            &__date {
+                text-align: end;
+                span {
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 16px;
+                    text-align: center;
+
+                    color: #a4a3b1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-user {
+        &__wrapper {
+            .row {
+                .col-lg-3 {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+            &__answer {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 460px) {
+    .content-user {
+        &__wrapper {
+            .row {
+                .col-lg-3 {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

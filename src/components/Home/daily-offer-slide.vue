@@ -12,7 +12,10 @@
           <span>{{ off }} درصد تخفیف</span>
         </div>
         <div class="blog__wrapper__slider__item__text__info__price">
-          <span>{{ formatPrice(price.toString()) }} تومان </span>
+          <div class="blog__wrapper__slider__item__text__info__price__old">
+            <span>{{ formatPrice(getOldPrice(price, off)) }} تومان</span>
+          </div>
+          <span>{{ formatPrice(price) }} تومان </span>
         </div>
       </div>
     </div>
@@ -20,8 +23,7 @@
 </template>
 
 <script>
-import { formatPrice } from "../../assets/js/script";
-
+import { formatPrice, getOldPrice } from "../../assets/js/script";
 
 export default {
   name: "daily-offer-slide",
@@ -29,6 +31,7 @@ export default {
   props: ["off", "price", "name", "url", "image"],
   methods: {
     formatPrice,
+    getOldPrice,
   },
 };
 </script>

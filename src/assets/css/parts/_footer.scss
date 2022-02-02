@@ -1,5 +1,8 @@
 .main-footer {
     margin-bottom: 86px;
+    &--mb {
+        margin-bottom: 0;
+    }
     &__wrapper {
         padding: 18px 20px;
         position: relative;
@@ -71,6 +74,7 @@
                         li {
                             margin-bottom: 32px;
                             a {
+                                transition: 0.3s;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -78,6 +82,10 @@
                                 font-size: 13px;
                                 font-weight: 400;
                                 color: rgba(255, 255, 255, 0.6);
+                                &:hover {
+                                    font-weight: 600;
+                                    color: #fff;
+                                }
                             }
                             &:last-child {
                                 margin-bottom: 0;
@@ -96,8 +104,8 @@
                     }
                     .swiper {
                         &-btn {
-                            &-next,
-                            &-prev {
+                            &-next {
+                                @include absolute(50%, f, f, 0);
                                 transform: translateY(-50%);
                                 cursor: pointer;
                                 z-index: 99;
@@ -113,9 +121,18 @@
                             }
                             &-prev {
                                 @include absolute(50%, 0, f, f);
-                            }
-                            &-next {
-                                @include absolute(50%, f, f, 0);
+                                transform: translateY(-50%);
+                                cursor: pointer;
+                                z-index: 99;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 35px;
+                                height: 35px;
+                                background: rgba(255, 255, 255, 0.2);
+                                backdrop-filter: blur(10px);
+                                border-radius: 5px;
+                                font-size: 18px;
                             }
                         }
                     }
@@ -161,6 +178,8 @@
                     border-radius: 8px;
                     border: 1px solid $green2;
                     font-size: 18px;
+                    i {
+                    }
                 }
             }
         }

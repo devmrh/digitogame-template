@@ -1,0 +1,185 @@
+.faq-content {
+    margin-top: 100px;
+
+    &__header {
+        text-align: center;
+        position: relative;
+        margin-bottom: -47px;
+        &::before {
+            content: "";
+            @include absolute(0, 50%, f, f);
+            transform: translateX(50%);
+            border-top: 5px solid #00ffd1;
+            box-shadow: 0 10px 45px 10px rgba(0, 255, 133, 0.15);
+            width: 300px;
+            border-radius: 0px 0px 10px 10px;
+        }
+        &__title {
+            padding: 36px 10px 83px;
+            span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 31px;
+                color: #ffffff;
+            }
+        }
+        &__background {
+            content: "";
+            background-image: url("../img/Rectangle-9.png");
+            backdrop-filter: blur(5px);
+            @include absolute(0, 0, 0, 0);
+            z-index: -1;
+            border-radius: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+    }
+    &__wrapper {
+        margin: 0 35px 50px;
+        ul {
+            li {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__item {
+            transition: all 0.3s;
+            position: relative;
+            z-index: 99;
+            border: 1px solid #3c3c51;
+            padding: 0 27px;
+            border-radius: 15px;
+            background-color: rgba(30, 30, 51, 0.5);
+            $item: &;
+            &__title {
+                cursor: pointer;
+                padding: 18px 0;
+                display: flex;
+                align-items: center;
+                h3 {
+                    transition: 0.3s;
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: #9b9b9b;
+                    line-height: 28px;
+                }
+                i {
+                    margin-right: auto;
+                    transition: 0.3s;
+                    font-size: 12px;
+                    span {
+                        &.path1,
+                        &.path2 {
+                            &::before {
+                                transition: 0.3s;
+
+                                color: #b3b7bc;
+                            }
+                        }
+                    }
+                }
+            }
+            &__desc {
+                transition: all 0.3s;
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            &.active {
+                border-color: $green2;
+                #{$item}__title {
+                    h3 {
+                        color: $green2;
+                        font-weight: 500;
+                    }
+                    i {
+                        transform: rotate(-180deg);
+                        span {
+                            &.path1,
+                            &.path2 {
+                                &::before {
+                                    color: $green2;
+                                }
+                            }
+                        }
+                    }
+                }
+                #{$item}__desc {
+                    height: auto;
+                    opacity: 1;
+                    width: auto;
+                    margin: 5px 0 18px 0;
+                    background-color: rgba(19, 18, 41, 0.9);
+                    border-radius: 15px;
+                    padding: 33px 26px;
+                    p {
+                        font-size: 17px;
+                        font-weight: 300;
+                        color: #9b9b9b;
+                        line-height: 33px;
+                    }
+                }
+            }
+        }
+    }
+    &__extra {
+        background-color: #00ffd1;
+        box-shadow: 0px 10px 45px 10px rgba(0, 255, 133, 0.15);
+        border-radius: 10px;
+        margin: 0 35px;
+        padding: 18px 10px;
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-content {
+        &__wrapper {
+            margin: 0 10px 50px;
+            &__item {
+                $item: &;
+                padding: 0 15px;
+                &__title {
+                    padding: 15px 0;
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+                &.active {
+                    #{$item}__desc {
+                        padding: 15px;
+                        margin: 5px 0 15px 0;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &__extra {
+            margin: 0 10px;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .faq-content {
+        &__wrapper {
+            margin-bottom: 30px;
+        }
+    }
+}

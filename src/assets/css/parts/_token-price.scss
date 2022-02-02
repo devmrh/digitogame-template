@@ -1,0 +1,59 @@
+.token-price
+{
+    &__wrapper
+    {
+        ul
+        {
+            li
+            {
+                margin-bottom: 15px;
+                &:last-child
+                {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__item
+        {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 21.5px 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--color
+            {
+                background-color:rgba(255, 255, 255, 0.1);
+            }
+            &__title
+            {
+                display: flex;
+                align-items: center;
+                img
+                {   
+                    width: 33px;
+                    height: 23px;
+                    object-fit: cover;
+                    margin-left: 18px;
+                    border-radius: 3px;
+                }
+                p
+                {
+                    font-size: 17px;
+                    font-weight: 400;
+                    color: #fff;
+                    line-height: 26px;
+                }
+            }
+            &__value
+            {
+                span
+                {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

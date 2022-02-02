@@ -74,7 +74,6 @@
                             border-radius: 2px 0 0 2px;
                             background-color: #fd6b63;
                             box-shadow: 7px 0 15px 0 rgba(0, 255, 209, 0.3);
-
                         }
                         &::after {
                             content: "";
@@ -98,24 +97,25 @@
                             display: flex;
                             line-height: 18px;
                         }
-                        &::before {
+                        &::before,
+                        &::after {
                             content: "";
-                            @include absolute(0, -8px, 0, f);
+                            transition: 0.3s;
                             width: 2px;
                             border-radius: 2px 0 0 2px;
                             background-color: #4f4d65;
                         }
+                        &::before {
+                            @include absolute(0, -8px, 0, f);
+                        }
                         &::after {
-                            content: "";
                             @include absolute(0, f, 0, -8px);
-                            width: 2px;
-                            border-radius: 0 2px 2px 0;
-                            background-color: #4f4d65;
                         }
                     }
                 }
                 &__button {
                     a {
+                        transition: 0.3s;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -129,7 +129,7 @@
                     }
                 }
             }
-        
+
             &:hover {
                 border-color: $green2;
                 box-shadow: 0 10px 45px 10px rgba(0, 255, 133, 0.1);
@@ -139,11 +139,8 @@
                             display: flex;
                         }
                         &__new {
+                            &::after,
                             &::before {
-                                background-color: $green2;
-                                box-shadow: 7px 0 15px 1px rgba(0, 255, 209, 0.3);
-                            }
-                            &::after {
                                 background-color: $green2;
                                 box-shadow: 7px 0 15px 1px rgba(0, 255, 209, 0.3);
                             }
@@ -156,28 +153,20 @@
                         }
                     }
                 }
-           
             }
-            &--hover
-            {
-                &:hover
-                {
+            &--hover {
+                &:hover {
                     margin-bottom: 6px;
-                    #{$item}__text
-                {
-                    &__price
-                    {
-                        &__new
-                        {
-                            span
-                            {
-                                line-height: 11px;
+                    #{$item}__text {
+                        &__price {
+                            &__new {
+                                span {
+                                    line-height: 11px;
+                                }
                             }
                         }
                     }
                 }
-                }
-                
             }
         }
         &__row {

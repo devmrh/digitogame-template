@@ -4,9 +4,9 @@
       <div class="comment__wrapper__item__header">
         <div class="comment__wrapper__item__header__number">
           <span>{{ number }}</span>
-        </div>
-        <div class="comment__wrapper__item__header__icon">
           <i class="dn-daler"></i>
+
+          <span>{{ number }}</span>
         </div>
       </div>
       <div class="comment__wrapper__item__title">

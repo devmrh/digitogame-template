@@ -1,6 +1,9 @@
 .main-header {
     padding-top: 75px;
     margin-bottom: 70px;
+    &--user {
+        margin-bottom: 60px;
+    }
     &__wrapper {
         display: flex;
         align-items: center;
@@ -16,7 +19,7 @@
                 a {
                     img {
                         width: 30px;
-                        height:30px;
+                        height: 30px;
                         border-radius: 50%;
                         object-fit: cover;
                     }
@@ -41,8 +44,6 @@
                 background-color: $navy-blue30;
                 border-radius: 20px;
                 font-size: 27px;
-                i {
-                }
             }
         }
         &__search {
@@ -77,8 +78,6 @@
                     border: none;
                     background-color: transparent;
                     font-size: 30px;
-                    i {
-                    }
                 }
             }
             a {
@@ -94,6 +93,7 @@
         }
         &__cart {
             display: flex;
+            position: relative;
             a {
                 display: flex;
                 align-items: center;
@@ -103,8 +103,21 @@
                 background-color: $green;
                 border-radius: 20px;
                 font-size: 35px;
-                i {
-                }
+            }
+            > span {
+                @include absolute(f, -5px, -5px, f);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 25px;
+                line-height: 21px;
+                border-radius: 11px;
+                background-color: $green;
+                border: 2px solid #13172d;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
             }
         }
     }
@@ -196,25 +209,18 @@
     }
 }
 
-
-@media(max-width:480px)
-{
-    .main-header
-    {
-        &__wrapper
-        {
-            &__login
-            {
+@media (max-width: 480px) {
+    .main-header {
+        &__wrapper {
+            &__login {
                 width: 45px;
                 padding: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                &__name
-                {
+                &__name {
                     display: none;
                 }
-               
             }
         }
     }

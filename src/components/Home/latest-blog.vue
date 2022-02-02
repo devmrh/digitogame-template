@@ -1,12 +1,15 @@
 <template>
   <section class="blog blog--mb0 inview">
     <div class="blog__wrapper">
-      <div class="sec-title sec-title--yellow">
-        <div class="sec-title__caption">
-          <p>آخرین مطالب<span> دیجیتو مگ</span></p>
-          <span>مشاهده آرشیو</span>
+      <router-link to="blogs">
+        <div class="sec-title sec-title--yellow">
+          <div class="sec-title__caption">
+            <p>آخرین مطالب<span> دیجیتو مگ</span></p>
+            <span>مشاهده آرشیو</span>
+          </div>
         </div>
-      </div>
+      </router-link>
+
       <div class="blog__wrapper__slider">
         <swiper
           :spaceBetween="20"
@@ -42,6 +45,7 @@
               :url="item.url"
               :writer="item.writer"
               :writerUrl="item.writerUrl"
+              :text="item.text"
             ></latest-blog-slide>
           </swiper-slide>
         </swiper>
@@ -75,6 +79,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "آموزش دانلود و نصب بازی بتلفیلد ۲۴۰۲",
@@ -86,6 +92,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "هر آنچه که باید درباره بازی نگهبانان کهک ...",
@@ -97,6 +105,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "آموزش ویدیویی و کامل بازی فورتزا هورایزن",
@@ -108,6 +118,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "مشخصات سیستم بازی فارکرای۶ منتشر شد",
@@ -119,6 +131,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "آموزش دانلود و نصب بازی بتلفیلد ۲۴۰۲",
@@ -130,6 +144,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "هر آنچه که باید درباره بازی نگهبانان کهک ...",
@@ -141,6 +157,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
         {
           name: "آموزش ویدیویی و کامل بازی فورتزا هورایزن",
@@ -152,6 +170,8 @@ export default {
           number: "5",
           url: "#",
           writerUrl: "#",
+          text:
+            "salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi salam hi ",
         },
       ],
     };

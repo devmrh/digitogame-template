@@ -1,0 +1,50 @@
+.token-header
+{
+    margin-bottom: 38px;
+    &__wrapper
+    {
+        background-color:$green;
+        box-shadow: 0 10px 45px 10px rgba(0, 255, 133, 0.05);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:12.5px 20px;
+        &__text
+        {
+            display: flex;
+            align-items: center;
+            i
+            {
+                font-size: 25px;
+                margin-left: 13px;
+            }
+            p
+            {
+                color: #fff;
+                font-size: 17px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+        &__number
+        {
+            span
+            {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                line-height: 25px;
+                font-size: 17px;
+                font-weight: 700;
+                color: #fff;
+                small
+                {
+                    order: 1;
+                    font-size: 100%;
+
+                }
+            }
+        }
+    }
+}

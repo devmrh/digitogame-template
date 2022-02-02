@@ -2,10 +2,13 @@
   <section class="blog inview">
     <div class="blog__wrapper">
       <div class="sec-title">
-        <div class="sec-title__caption">
-          <p>پیشنهاد روزانه<span> دیجیتو گیم</span></p>
-          <span>مشاهده آرشیو</span>
-        </div>
+        <router-link to="cat-product">
+          <div class="sec-title__caption">
+            <p>پیشنهاد روزانه<span> دیجیتو گیم</span></p>
+            <span>مشاهده آرشیو</span>
+          </div>
+        </router-link>
+
         <daily-offer-timer seconds="172800"></daily-offer-timer>
       </div>
       <div class="blog__wrapper__slider">
@@ -51,7 +54,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import DailyOfferSlide from "./daily-offer-slide.vue";
 import image1 from "../../assets/img/daily-offer1.png";
 import image2 from "../../assets/img/daily-offer2.png";
-import DailyOfferTimer from './daily-offer-timer.vue';
+import DailyOfferTimer from "./daily-offer-timer.vue";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 SwiperCore.use([Pagination, Autoplay]);
 export default {

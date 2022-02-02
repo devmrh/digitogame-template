@@ -5,6 +5,22 @@
             border-radius: 20px;
             padding: 15px 10px;
             margin-bottom: 30px;
+            &--red {
+                background-color: rgb(253, 107, 99);
+                box-shadow: rgb(251 33 73 / 20%) 0px 10px 45px 10px;
+            }
+            &--green {
+                background-color: rgb(0, 255, 209);
+                box-shadow: rgb(0 255 133 / 15%) 0px 10px 45px 10px;
+            }
+            &--yellow {
+                background-color: rgb(252, 255, 128);
+                box-shadow: rgb(255 134 46 / 15%) 0px 10px 45px 10px;
+            }
+            &--blue {
+                background-color: rgb(46, 111, 215);
+                box-shadow: rgb(26 26 255 / 15%) 0px 10px 45px 10px;
+            }
             ul {
                 li {
                     display: flex;
@@ -17,12 +33,13 @@
                     font-weight: 300;
                     color: #fff;
                     line-height: 21px;
-                    span {
+                    > span {
                         display: flex;
                         margin-left: 14px;
+                        flex: 0 0 9px;
                         width: 9px;
                         height: 9px;
-                        border-radius:50%;
+                        border-radius: 50%;
                     }
                     &:last-child {
                         margin-bottom: 0;
@@ -60,8 +77,7 @@
                 color: $green2;
                 font-size: 15px;
                 font-weight: 500;
-                &:hover
-                {
+                &:hover {
                     background-color: $green2;
                     color: #000;
                 }
@@ -93,8 +109,7 @@
                             color: #609dff;
                         }
                     }
-                    &:last-child
-                    {
+                    &:last-child {
                         border-bottom: none;
                     }
                 }
@@ -112,54 +127,43 @@
                 color: $green2;
                 font-size: 15px;
                 font-weight: 500;
-                &:hover
-                {
+                &:hover {
                     background-color: $green2;
                     color: #000;
                 }
             }
-           
         }
-        &__dargah
-        {
+        &__dargah {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: #27243c;
             border-radius: 20px;
-            padding:10px 15px;
-            &__text
-            {
-                p
-                {
+            padding: 10px 15px;
+            &__text {
+                p {
                     font-size: 15px;
                     font-weight: 300;
                     color: #fff;
                 }
             }
-            &__select
-            {
-                input
-                {
+            &__select {
+                input {
                     display: none;
-                    &:checked
-                    {
-                        +label
-                        {
+                    &:checked {
+                        + label {
                             border-color: $green2;
                         }
                     }
                 }
-                label
-                {
+                label {
                     transition: 0.3s;
                     cursor: pointer;
-                    border: 1px solid #4A475F;
+                    border: 1px solid #4a475f;
                     border-radius: 15px;
                     padding: 10px;
                     margin-left: 10px;
-                    &:last-child
-                    {
+                    &:last-child {
                         margin-left: 0;
                     }
                 }
@@ -168,17 +172,12 @@
     }
 }
 
-@media(max-width:480px)
-{
-    .cart-sidebar
-    {
-        &__wrapper
-        {
-            &__dargah
-            {
+@media (max-width: 480px) {
+    .cart-sidebar {
+        &__wrapper {
+            &__dargah {
                 flex-direction: column;
-                &__text
-                {
+                &__text {
                     margin-bottom: 20px;
                 }
             }

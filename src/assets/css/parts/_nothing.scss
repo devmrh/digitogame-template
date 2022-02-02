@@ -1,0 +1,106 @@
+.content-user {
+    &__nothing {
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+        &__item {
+            border: 1.5px solid #ffffff;
+            border-radius: 25px;
+            text-align: center;
+            padding-top: 43px;
+            padding-bottom: 39px;
+            flex: 0 0 740px;
+            max-width: 740px;
+            &__icon {
+                margin-bottom: 27px;
+                i {
+                    font-size: 67px;
+                    span {
+                        &.path1 {
+                            &::before {
+                                color: #fff;
+                            }
+                        }
+                        &.path2 {
+                            &::before {
+                                color: #fff;
+                            }
+                        }
+                        &.path3 {
+                            &::before {
+                                color: #fff;
+                            }
+                        }
+                        &.path4 {
+                            &::before {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            &__text {
+                font-weight: 300;
+                font-size: 25px;
+                line-height: 37px;
+                color: #ffffff;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .content-user {
+        &__nothing {
+            &__item {
+                flex: 0 0 580px;
+                max-width: 580px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .content-user {
+        &__nothing {
+            &__item {
+                padding-top: 25px;
+                padding-bottom: 30px;
+                flex: 0 0 480px;
+                max-width: 480px;
+                &__icon {
+                    margin-bottom: 12px;
+                    i {
+                        font-size: 55px;
+                    }
+                }
+                &__text {
+                    font-size: 18px;
+                    line-height: 33px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .content-user {
+        &__nothing {
+            &__item {
+                flex: 0 0 300px;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .content-user {
+        &__nothing {
+            &__item {
+                flex: 0 0 300px;
+                max-width: 300px;
+            }
+        }
+    }
+}

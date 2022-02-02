@@ -4,8 +4,8 @@
       <div class="roow">
         <div class="cool-toolbar"><toolbar></toolbar></div>
         <div class="cool-content">
-          <my-header></my-header>
-          <inner-contact></inner-contact>
+          <my-header class="inview"></my-header>
+          <inner-contact class="inview"></inner-contact>
         </div>
       </div>
     </div>
@@ -16,8 +16,7 @@
 <script>
 import Application from "../components/Home/application.vue";
 import MyHeader from "../components/Header/my-header.vue";
-
-import MyFooter from "../components/Footer/my-footer.vue";
+import MyFooter from "../components/Footer/MyFooter.vue";
 import toolbar from "../components/Toolbar/toolbar.vue";
 import InnerContact from "../components/ContactUs/innerContact.vue";
 export default {

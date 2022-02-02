@@ -2,7 +2,7 @@
 @import "../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min";
 @import "../../../node_modules/swiper/swiper-bundle.min";
 @import "../../../node_modules/toastr/build/toastr.min";
-
+// @import "../../../node_modules/sweetalert2/dist/sweetalert2.min";
 
 @import "parts/base/fonts";
 @import "parts/base/base";
@@ -54,6 +54,25 @@
 //search-result
 @import "parts/search-result-header";
 
+//faq
+@import "parts/faq-content";
+@import "parts/screen";
+@import "parts/404";
+
 //cart
 @import "parts/cart-sidebar";
 @import "parts/cart-context";
+
+//token-show
+@import "parts/token-header";
+@import "parts/token";
+@import "parts/token-price";
+
+//user-panel
+@import "parts/sidebar-user";
+@import "parts/content-user";
+@import "parts/product-user";
+@import "parts/nothing";
+@import "parts/form";
+@import "parts/answer";
+@import "parts/conversation";

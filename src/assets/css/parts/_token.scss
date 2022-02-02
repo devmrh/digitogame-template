@@ -1,0 +1,123 @@
+.token {
+    margin-bottom: 50px;
+    &__wrapper {
+        &__row {
+            display: flex;
+            &__col-small {
+                flex: 0 0 285px;
+                width: 285px;
+                &__item {
+                    background-color: #26233b;
+                    border-radius: 25px;
+                    padding: 20px 17px 27px 17px;
+                    margin-bottom: 20px;
+                    &__title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                        &__text {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 10px;
+                            img {
+                                height: 28px;
+                                width: 40px;
+                                object-fit: cover;
+                                border-radius: 3px;
+                                margin-left: 13px;
+                            }
+                            h3 {
+                                font-size: 17px;
+                                font-weight: 600;
+                                line-height: 26px;
+                                color: #fff;
+                            }
+                        }
+                        &__icon {
+                            font-size: 17px;
+                        }
+                    }
+                    &__price {
+                        margin-bottom: 15px;
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            margin: 0 -5px;
+                            li {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: rgba(196, 196, 196, 0.05);
+                                border-radius: 8px;
+                                line-height: 40px;
+                                font-size: 15px;
+                                font-weight: 500;
+                                color: #fff;
+                                flex: 0 0 calc(50% - 10px);
+                                margin: 0 5px;
+                                padding: 0 13px;
+                                img {
+                                    margin-right: 10px;
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                                i {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                    &__chart {
+                        background-color: #17142c;
+                        border-radius: 15px;
+                        padding: 10px 12px 24px 12px;
+                        margin-bottom: 26px;
+                        &__title {
+                            p {
+                                font-size: 12px;
+                                font-weight: 300;
+                                color: #fff;
+                            }
+                        }
+                        &__nemodar {
+                            #Chart {
+                                // width: 250px;
+                                // height:115px;
+                            }
+                        }
+                    }
+                    &__update {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        span {
+                            font-size: 12px;
+                            font-weight: 300;
+                            color: #fff;
+                            line-height: 18px;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &__col-big {
+                flex: 0 0 calc(100% - 330px);
+                width: calc(100% - 330px);
+                margin-right: 45px;
+                &__chart {
+                    background-color: #26233b;
+                    border-radius: 25px;
+                    padding: 35px 45px 10px 33px;
+                    #myChart
+                    {
+                        height: 310px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

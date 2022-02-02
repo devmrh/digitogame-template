@@ -26,15 +26,15 @@
                         border-radius: 20px;
                     }
                 }
-                .swiper {
-                    &-slide {
-                        &-active {
-                            #{$list}__item {
-                                border-color: $green;
-                            }
-                        }
-                    }
-                }
+                // .swiper {
+                //     &-slide {
+                //         &-active {
+                //             #{$list}__item {
+                //                 border-color: $green;
+                //             }
+                //         }
+                //     }
+                // }
             }
             &__show {
                 background-color: rgba(37, 34, 58, 0.15);

@@ -10,6 +10,11 @@
       <div class="blog__wrapper__slider__item__text__title">
         <router-link :to="url">{{ name }}</router-link>
       </div>
+      <div class="blog__wrapper__slider__item__text__desc">
+        <p>
+          {{ text }}
+        </p>
+      </div>
       <div class="blog__wrapper__slider__item__text__info">
         <div class="blog__wrapper__slider__item__text__info__discount">
           <span>{{ writer }}</span>
@@ -38,6 +43,7 @@ export default {
     "number",
     "url",
     "writerUrl",
+    "text",
   ],
 };
 </script>
