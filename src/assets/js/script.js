@@ -11,9 +11,21 @@ export function formatPrice(price) {
     }
     return mPrice
 }
+
 export function getOldPrice(price, off) {
     price = price.toString()
     off = off.toString()
     let currentPercent = 100 - off;
     return parseInt((price * 100) / currentPercent);
+}
+export function unsuccessfulToast(swal, image) {
+    swal({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 100000,
+        timerProgressBar: true,
+        html:
+            `<p class="unsuccessful"><img src="${image}" >کد وارد شده صحیح نمیباشد</p>`,
+    })
 }

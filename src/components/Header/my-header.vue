@@ -16,9 +16,9 @@
         ></a>
       </div>
       <div class="main-header__wrapper__search">
-        <form action="search">
-          <input type="text" placeholder="دنبال چیزی هستید؟" />
-          <button>
+        <form>
+          <input type="text" placeholder="دنبال چیزی هستید؟" v-model="searchPhrase" />
+          <button @click.prevent="search">
             <i class="dn-search"
               ><span class="path1"></span><span class="path2"></span
             ></i>
@@ -41,5 +41,19 @@
 <script>
 export default {
   name: "my-header",
+  data() {
+    return {
+      searchPhrase: "",
+    };
+  },
+  methods: {
+    search() {
+      this.$router.push({
+        path: "search-result?phrase",
+        query: { phrase: this.searchPhrase },
+      });
+      this.searchPhrase = "";
+    },
+  },
 };
 </script>

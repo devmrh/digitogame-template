@@ -12,7 +12,7 @@
       </div>
       <ul>
         <li :class="{ content: true, active: isActive }">
-          <a href="#" @click="clickOnContent"
+          <a href="#" @click.prevent="clickOnContent"
             ><i class="dn-category"
               ><span class="path1"></span><span class="path2"></span
               ><span class="path3"></span><span class="path4"></span> </i
@@ -83,7 +83,6 @@ export default {
       this.swiper = swiper;
     },
     clickOnContent: function (e) {
-      e.preventDefault();
       if (this.isClosing) {
         return;
       }

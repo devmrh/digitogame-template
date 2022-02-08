@@ -4,7 +4,9 @@
       <div class="pagination__wrapper">
         <ul>
           <li v-for="i in count" :key="i">
-            <a href="#" v-if="active != i" @click.prevent="pageChanged(i)">{{ i }}</a>
+            <a href="#" v-if="active != i" @click.prevent="$emit('pageChanged', i)">{{
+              i
+            }}</a>
             <span v-else>{{ i }}</span>
           </li>
         </ul>
@@ -17,11 +19,6 @@ export default {
   name: "Pagination",
   props: ["count", "active"],
   emits: ["pageChanged"],
-  methods: {
-    pageChanged(id) {
-      this.$emit("pageChanged", id);
-    },
-  },
 };
 </script>
 <style scoped>

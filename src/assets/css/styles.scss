@@ -2,7 +2,7 @@
 @import "../../../node_modules/bootstrap-select/dist/css/bootstrap-select.min";
 @import "../../../node_modules/swiper/swiper-bundle.min";
 @import "../../../node_modules/toastr/build/toastr.min";
-// @import "../../../node_modules/sweetalert2/dist/sweetalert2.min";
+@import "../../../node_modules/sweetalert2/dist/sweetalert2.min";
 
 @import "parts/base/fonts";
 @import "parts/base/base";
@@ -25,16 +25,28 @@
 @import "parts/game";
 @import "parts/comment";
 @import "parts/application";
+
+
+
+//terms
 @import "parts/terms-content";
+
+
+//blog-pages
 @import "parts/blog-content";
 @import "parts/slidebar-blog";
+@import "parts/post-page-user";
+@import "parts/post-page-user-comments";
+@import "parts/post-page-user-sidebar.scss";
 
 
 //login
 @import "parts/login";
 
+
 //contactus
 @import "parts/contactus";
+
 
 //single-product
 @import "parts/single-product-sidebar";
@@ -76,3 +88,4 @@
 @import "parts/form";
 @import "parts/answer";
 @import "parts/conversation";
+@import "parts/dashboard";

@@ -1,0 +1,159 @@
+.comments-user {
+    &__wrapper {
+        &__post-user {
+            margin-bottom: 50px;
+            background-color: #28253d;
+            border-radius: 35px;
+            padding: 40px 40px 30px 40px;
+            &__info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 59px;
+                &__image {
+                    padding-left: 43px;
+                    flex: 0 0 93px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+                .form {
+                    &-row {
+                        flex: 0 0 calc(100% - 57px);
+                        width: calc(100% - 57px);
+                        margin-right: -16px;
+                        margin-left: -16px;
+                    }
+                    &-group {
+                        margin-bottom: 0;
+                        padding-right: 16px;
+                        padding-left: 16px;
+                        input {
+                            text-align: right;
+                            line-height: 50px;
+                            height: 50px;
+                            background-color: #201d35;
+                            color: rgba(255, 255, 255, 0.8);
+                            font-size: 15px;
+                            font-weight: 300;
+                            border-radius: 12px;
+                            padding: 0 10px;
+                            border: none;
+                            &:hover,
+                            &:focus {
+                                background-color: #201d35;
+                                box-shadow: none;
+                                outline: 0;
+                            }
+                            &::placeholder {
+                                color: rgba(255, 255, 255, 0.8);
+                                font-weight: 15px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+
+                &__specifications {
+                    display: flex;
+                    align-items: center;
+                    background: #201d35;
+                    border-radius: 12px;
+                    justify-content: space-between;
+                    flex: 0 1 100%;
+                    padding: 14px 20px;
+                    &__right {
+                        p {
+                            font-weight: 300;
+                            font-size: 15px;
+                            line-height: 22px;
+                            text-align: right;
+                            color: #ffffff;
+
+                            span {
+                                color: $green2;
+                            }
+                        }
+                    }
+
+                    &__left {
+                        span {
+                            color: #9b99b1;
+                            font-weight: 300;
+                            font-size: 12px;
+                            line-height: 18px;
+                            a {
+                                color: #00ffd1;
+                            }
+                        }
+                    }
+                }
+            }
+            &__massege {
+                margin-bottom: 20px;
+                textarea {
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    resize: none;
+                    line-height: 26px;
+                    font-size: 17px;
+                    font-weight: 300;
+                    color: rgba(255, 255, 255, 0.8);
+                    min-height: 75px;
+                }
+            }
+            &__button {
+                display: flex;
+                button {
+                    margin-right: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 50px;
+                    padding: 0 32px;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: none;
+                    border-radius: 12px;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .comments-user {
+        &__wrapper {
+            &__post-user {
+                padding: 20px 15px;
+                &__info {
+                    flex-direction: column;
+
+                    &__specifications {
+                        flex-direction: column;
+                        padding: 14px 12px;
+
+                        &__right {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &__image {
+                        padding-left: 0;
+                        flex: unset;
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

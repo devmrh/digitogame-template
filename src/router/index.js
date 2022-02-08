@@ -8,6 +8,11 @@ import Blogs from '../views/Blogs.vue'
 import CatProduct from '../views/CatProduct.vue'
 import SingleProduct from '../views/SingleProduct.vue'
 import Cart from '../views/Cart.vue'
+import Login from '../views/Login.vue'
+import Signup from '../views/Signup.vue'
+import AmazingSales from '../views/AmazingSales.vue'
+import SearchResult from '../views/SearchResult.vue'
+import NotFound from '../views/NotFound.vue'
 
 
 const routes = [
@@ -56,6 +61,35 @@ const routes = [
     name: 'Cart',
     component: Cart
   },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: Signup
+  },
+  {
+    path: '/amazing-sales',
+    name: 'AmazingSales',
+    component: AmazingSales
+  },
+  {
+    path: '/search-result',
+    name: 'SearchResult',
+    props: true,
+    component: SearchResult
+
+  },
+
+  {
+    path: '/404', name: 'NotFound', component: NotFound
+  },
+  {
+    path: '/:catchAll(.*)', redirect: '404'
+  }
 ]
 
 const router = createRouter({

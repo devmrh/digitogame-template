@@ -54,7 +54,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import DailyOfferSlide from "./daily-offer-slide.vue";
 import image1 from "../../assets/img/daily-offer1.png";
 import image2 from "../../assets/img/daily-offer2.png";
-import DailyOfferTimer from "./daily-offer-timer.vue";
+import DailyOfferTimer from "../CountdownTimer.vue";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 SwiperCore.use([Pagination, Autoplay]);
 export default {

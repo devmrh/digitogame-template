@@ -4,7 +4,8 @@
       class="cat-product-sidebar__icon-filter"
       data-toggle="openbox"
       data-target="filter"
-      data-status="false"
+      :data-status="status"
+      @click="status = !status"
     >
       <i class="dn-filter"></i>
     </div>
@@ -12,9 +13,9 @@
       class="cat-product-sidebar__wrapper"
       data-toggle="showbox"
       data-target="filter"
-      data-status="false"
+      :data-status="status"
     >
-      <div data-toggle="closebox" data-target="filter"></div>
+      <div data-toggle="closebox" data-target="filter" @click="status = !status"></div>
       <cat-product-sidebar-category :items="categories"></cat-product-sidebar-category>
       <cat-product-sidebar-price></cat-product-sidebar-price>
       <cat-product-filter-console :items="consoles"></cat-product-filter-console>
@@ -34,6 +35,11 @@ export default {
     CatProductSidebarPrice,
     CatProductFilterConsole,
     CatProductSidebarDelivery,
+  },
+  data() {
+    return {
+      status: false,
+    };
   },
   name: "CatProductSidebar",
   props: ["categories", "consoles"],

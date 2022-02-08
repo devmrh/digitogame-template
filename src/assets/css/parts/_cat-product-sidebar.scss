@@ -92,6 +92,14 @@
                         flex: 0 0 calc(100% - 80px);
                         width: calc(100% - 80px);
                     }
+                    input[type="number"] {
+                        -moz-appearance: textfield;
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                    }
                     &:last-child {
                         margin-bottom: 0;
                     }
@@ -119,40 +127,37 @@
                         margin: 0 5px;
                         margin-bottom: 10px;
                         a {
-                            $item: &;
                             transition: 0.3s;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
-                            background-color: rgba(255, 255, 255, 0.05);
-                            position: relative;
-                            &::before {
-                                content: "";
-                                background: linear-gradient(180deg, #fd6b63 0%, #df4d45 100%);
-                                transition: 0.3s;
-                                opacity: 0;
-                                position: absolute;
-                                top: 0;
-                                right: 0;
-                                left: 0;
-                                bottom: 0;
-                                z-index: 1;
-                                border-radius: 8px;
-                            }
-                            * {
-                                position: relative;
-                                z-index: 2;
-                            }
+                            background: rgba(255, 255, 255, 0.05);
                             border-radius: 8px;
                             padding: 17px 5px 16px 5px;
-                            font-size: 10px;
-                            font-weight: 16px;
-                            color: #fff;
-                            img {
-                                font-size: 35px;
-                                margin-bottom: 18px;
+                            position: relative;
+                            &::before {
+                                transition: 0.3s;
+                                content: "";
+                                @include absolute(0, 0, 0, 0);
+                                background: linear-gradient(to bottom, rgba(253, 107, 99, 1), rgba(223, 77, 69, 1));
+                                opacity: 0;
+                                border-radius: 8px;
                             }
+                            img {
+                                width: 35px;
+                                height: 35px;
+                                object-fit: cover;
+                                margin-bottom: 18px;
+                                z-index: 2;
+                            }
+                            span {
+                                font-size: 10px;
+                                font-weight: 16px;
+                                color: #fff;
+                                z-index: 2;
+                            }
+
                             &:hover {
                                 &::before {
                                     opacity: 1;
@@ -226,6 +231,7 @@
 @media (max-width: 1200px) {
     .cat-product-sidebar {
         &__wrapper {
+            transition: 0.3s;
             padding: 60px 15px 15px;
             @include fixed(0, f, 0, -280px);
             background-color: #24223a;
@@ -235,6 +241,7 @@
                 left: 0;
                 visibility: visible;
                 opacity: 1;
+                overflow-y: auto;
             }
             [data-toggle="closebox"] {
                 @include absolute(10px, 10px, f, f);

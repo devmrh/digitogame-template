@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    $sec-title:&;
+    $sec-title: &;
     &__caption {
         position: relative;
         padding-right: 10px;
@@ -41,11 +41,11 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                background-color:$navy-blue;
+                background-color: $navy-blue;
                 border-radius: 10px;
                 width: 40px;
                 height: 59px;
-                margin:0 5px;
+                margin: 0 5px;
                 &:first-child {
                     background-color: #2bffd9;
                     span {
@@ -68,44 +68,34 @@
             }
         }
     }
-    &--yellow
-    {
-        #{$sec-title}__caption
-        {
+    &--yellow {
+        #{$sec-title}__caption {
             &::before {
                 border-color: $yellow2;
             }
-           p
-           {
-            span
-            {
-                color:$yellow2;
+            p {
+                span {
+                    color: $yellow2;
+                }
             }
-           }
         }
     }
 }
 
-@media(max-width:576px)
-{
-    .sec-title
-    {
+@media (max-width: 576px) {
+    .sec-title {
         margin-bottom: 30px;
     }
 }
 
-@media(max-width:480px)
-{
-    .sec-title
-    {
+@media (max-width: 480px) {
+    .sec-title {
         flex-direction: column;
         align-items: flex-start;
         justify-content: start;
-        &__timer
-        {
+        &__timer {
             margin-top: 30px;
-            span
-            {
+            span {
                 margin: 0;
             }
         }

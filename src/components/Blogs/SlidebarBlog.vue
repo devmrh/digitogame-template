@@ -1,7 +1,7 @@
 <template>
   <section class="blog-sidebar">
-    <div class="cool-side-categories">
-      <div class="cool-side-categories__head cool-side-categories--margin">
+    <div class="cool-side-categories cool-side-categories--margin">
+      <div class="cool-side-categories__head ">
         <h3>دسته بندی ها</h3>
       </div>
 
