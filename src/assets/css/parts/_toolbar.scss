@@ -2,12 +2,12 @@
     position: sticky;
     bottom: 0px;
     top: 65px;
-    
+
     &__wrapper {
         background-color: $navy-blue;
         box-shadow: 0px 5px 25px 20px rgba(16, 14, 37, 0.4);
         border-radius: 20px;
-        padding: 28px 0 155px 0;
+        padding: 28px 0;
         &__logo {
             margin-bottom: 47px;
             a {
@@ -63,25 +63,24 @@
                     }
                 }
                 &.active {
-                  a
-                  {
-                    border: 1px solid $green2;
-                    box-shadow: 0px 5px 45px 10px rgba(0, 255, 133, 0.15);
-                    i {
-                        span {
-                            &.path1,
-                            &.path2,
-                            &.path3,
-                            &.path4,
-                            &.path5,
-                            &.path6 {
-                                &::before {
-                                    color: $green2;
+                    a {
+                        border: 1px solid $green2;
+                        box-shadow: 0px 5px 45px 10px rgba(0, 255, 133, 0.15);
+                        i {
+                            span {
+                                &.path1,
+                                &.path2,
+                                &.path3,
+                                &.path4,
+                                &.path5,
+                                &.path6 {
+                                    &::before {
+                                        color: $green2;
+                                    }
                                 }
                             }
                         }
                     }
-                  }
                 }
             }
         }

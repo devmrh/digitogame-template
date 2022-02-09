@@ -2,7 +2,7 @@
   <section class="blog inview">
     <div class="blog__wrapper">
       <div class="sec-title">
-        <router-link to="cat-product">
+        <router-link to="amazing-sales">
           <div class="sec-title__caption">
             <p>پیشنهاد روزانه<span> دیجیتو گیم</span></p>
             <span>مشاهده آرشیو</span>

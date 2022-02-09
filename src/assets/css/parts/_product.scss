@@ -1,6 +1,18 @@
 .product {
     margin-bottom: 22px;
     &__wrapper {
+        &__row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 52.5px;
+            &__col {
+                flex: 0 0 20%;
+                max-width: 20%;
+                padding: 0 7.5px;
+                position: relative;
+                z-index: 9;
+            }
+        }
         &__item {
             transition: 0.3s;
             border: 1px solid transparent;
@@ -9,12 +21,11 @@
             padding: 8px 8px 13px 8px;
             margin-bottom: 30px;
             position: relative;
+            // z-index: 99;
             $item: &;
             &__image {
                 height: 180px;
                 margin-bottom: 15px;
-                position: relative;
-                z-index: 2;
                 a {
                     width: 100%;
                     height: 100%;
@@ -29,8 +40,6 @@
             &__text {
                 &__title {
                     margin-bottom: 15px;
-                    position: relative;
-                    z-index: 2;
                     h3 {
                         display: flex;
                         align-items: center;
@@ -109,20 +118,19 @@
                             content: "";
                             transition: 0.3s;
                             width: 2px;
-                            border-radius: 2px 0 0 2px;
                             background-color: #4f4d65;
                         }
                         &::before {
                             @include absolute(0, -8px, 0, f);
+                            border-radius: 2px 0 0 2px;
                         }
                         &::after {
                             @include absolute(0, f, 0, -8px);
+                            border-radius: 0 2px 2px 0;
                         }
                     }
                 }
                 &__button {
-                    position: relative;
-                    z-index: 2;
                     a {
                         transition: 0.3s;
                         display: flex;
@@ -148,7 +156,6 @@
                 @include absolute(-5px, 50%, f, f);
                 transform: translateX(50%);
                 opacity: 0;
-
                 span {
                     display: flex;
                     line-height: 12px;
@@ -189,21 +196,17 @@
                 }
             }
             &--hover {
+                border: none;
                 &::before {
                     transition: 0.3s;
                     opacity: 0;
                     content: "";
-                    @include absolute(-5px, -5px, -5px, -5px);
-                    border: 1px solid transparent;
-                    background: linear-gradient(180deg, #ddff0a 0%, #7939ff 33.85%, #fd6b63 67.71%, #00ffd1 100%)
-                        border-box;
-                    border-radius: 15px;
+                    @include absolute(-1px,-1px,-1px,-1px);
+                    background:  linear-gradient(180deg, #DDFF0A 0%, #7939FF 33.85%, #FD6B63 67.71%, #00FFD1 100%);
                     z-index: -1;
-                    box-shadow: 0px 5px 45px rgba(0, 255, 133, 0.1);
+                    border-radius: 15px;
                 }
-
                 &:hover {
-                    border-color: transparent;
                     box-shadow: none;
                     margin-bottom: 6px;
                     &::before {
@@ -212,16 +215,7 @@
                 }
             }
         }
-        &__row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 52.5px;
-            &__col {
-                flex: 0 0 20%;
-                max-width: 20%;
-                padding: 0 7.5px;
-            }
-        }
+    
     }
 }
 

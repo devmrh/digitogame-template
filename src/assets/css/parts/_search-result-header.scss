@@ -52,13 +52,28 @@
                 &__timer {
                     > span {
                         .div {
-                            background-color: #ffffff1a;
+                            background-color: rgba(255, 255, 255, 0.1);
+                            backdrop-filter: blur(5px);
                             width: 65px;
                             height: 110px;
+                            justify-content: space-around;
+                            padding: 10px 5px;
                             &:first-child {
                                 background-color: #2bffd9;
                                 span {
                                     color: #16122b;
+                                }
+                            }
+                            span
+                            {
+                                &:first-child
+                                {
+                                    font-size: 25px;
+                                }
+                                &:last-child
+                                {
+                                    font-size: 15px;
+                                    font-weight: 600;
                                 }
                             }
                         }
@@ -124,28 +139,22 @@
 @media (max-width: 768px) {
     .search-result-header {
         &__wrapper {
-            padding:20px 15px 60px 15px;
+            padding: 20px 15px 60px 15px;
             flex-direction: column;
             align-items: center;
-            &__timer
-            {
-               .sec-title
-               {
-                   &__timer
-                   {
+            &__timer {
+                .sec-title {
+                    &__timer {
                         margin-top: 30px;
-                   }
-               }
+                    }
+                }
             }
-            &__text
-            {
+            &__text {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                &__desc
-                {
-                    p
-                    {
+                &__desc {
+                    p {
                         text-align: center;
                     }
                 }

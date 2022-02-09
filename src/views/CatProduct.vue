@@ -68,12 +68,12 @@ export default {
     return {
       activePage: 1,
       consoles: [
-        { name: "ایکس باکس", image: image1 },
-        { name: "پلی استیشن", image: image2 },
-        { name: "استیم", image: image3 },
-        { name: "گیفت کارت", image: image4 },
-        { name: "کامپیوتر", image: image5 },
-        { name: "اوریجین", image: image6 },
+        { name: "ایکس باکس", image: image1, colors: ["#00E1B3", "#C39500"] },
+        { name: "پلی استیشن", image: image2, colors: ["#2E6FD7", "#B91051"] },
+        { name: "استیم", image: image3, colors: ["#FF00C7", "#E100A9"] },
+        { name: "گیفت کارت", image: image4, colors: ["#A16AEF", "#E6FD72"] },
+        { name: "کامپیوتر", image: image5, colors: ["#FF3A5E", "#FF6BCD"] },
+        { name: "اوریجین", image: image6, colors: ["#FD6B63", "#DF4D45"] },
       ],
       categories: [
         {

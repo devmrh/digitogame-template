@@ -26,7 +26,7 @@
           ></router-link>
         </li>
         <li>
-          <router-link to="#"
+          <router-link to="blogs"
             ><i class="dn-book"
               ><span class="path1"></span><span class="path2"></span
               ><span class="path3"></span><span class="path4"></span></i

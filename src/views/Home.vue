@@ -6,7 +6,7 @@
           <toolbar></toolbar>
         </div>
         <div class="cool-content">
-          <my-header></my-header>
+          <my-header class="inview"></my-header>
           <home-intro></home-intro>
           <daily-offer></daily-offer>
           <bestselling-game></bestselling-game>

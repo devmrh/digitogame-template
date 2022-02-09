@@ -58,3 +58,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.product__wrapper__item__discount span{
+ line-height: unset;
+ font-size: 12px;
+}
+</style>

@@ -26,8 +26,20 @@
           </ul>
         </div>
         <div class="cart-context__wrapper__item__text__info__left">
+          <div
+            v-if="off > 0"
+            class="cart-context__wrapper__item__text__info__left__discount"
+          >
+            <span>{{ off }} درصد تخفیف</span>
+          </div>
+          <div
+            v-if="off > 0"
+            class="cart-context__wrapper__item__text__info__left__old-price"
+          >
+            <span>{{ formatPrice(getOldPrice(price, off)) }} تومان</span>
+          </div>
           <div class="cart-context__wrapper__item__text__info__left__new-price">
-            <span>{{ price }} تومان</span>
+            <span>{{ formatPrice(price) }} تومان</span>
           </div>
         </div>
       </div>
@@ -39,9 +51,17 @@
 </template>
 
 <script>
+import { formatPrice, getOldPrice } from "../../assets/js/script";
 export default {
   name: "CartSingleProduct",
-  props: ["name", "console", "count", "price", "off", "productCount"],
+  props: {
+    name: {},
+    console: {},
+    count: {},
+    price: {},
+    productCount: {},
+    off: { default: 0 },
+  },
   data() {
     return {
       mCount: 0,
@@ -51,6 +71,8 @@ export default {
     this.mCount = this.productCount;
   },
   methods: {
+    getOldPrice,
+    formatPrice,
     onClose() {
       console.log("clicked on closed");
     },

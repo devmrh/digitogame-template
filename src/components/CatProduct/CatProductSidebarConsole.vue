@@ -5,7 +5,11 @@
     </div>
     <div class="cat-product-sidebar__wrapper__item__category">
       <ul>
-        <li v-for="(item, i) in items" :key="i">
+        <li
+          v-for="(item, i) in items"
+          :key="i"
+          :style="{ '--first-color': item.colors[0], '--sec-color': item.colors[1] }"
+        >
           <a href="#">
             <img :src="item.image" alt="" />
             <span> {{ item.name }}</span>

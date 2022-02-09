@@ -6,7 +6,7 @@
           <a href="#"><img src="@/assets/img/avator.png" alt="" /></a>
         </div>
         <div class="main-header__wrapper__login__name">
-          <a href="#">ورود یا ثبت نام</a>
+          <router-link to="/login">ورود یا ثبت نام</router-link>
         </div>
       </div>
       <div class="main-header__wrapper__notification">
@@ -29,10 +29,10 @@
         ></a>
       </div>
       <div class="main-header__wrapper__cart">
-        <a href="#"
+        <router-link to="cart"
           ><i class="dn-cart"><span class="path1"></span><span class="path2"></span></i
-        ></a>
-        <span>5</span>
+        ></router-link>
+        <span style="cursor: pointer" @click="cart">5</span>
       </div>
     </div>
   </header>
@@ -53,6 +53,11 @@ export default {
         query: { phrase: this.searchPhrase },
       });
       this.searchPhrase = "";
+    },
+    cart() {
+      this.$router.push({
+        path: "cart",
+      });
     },
   },
 };

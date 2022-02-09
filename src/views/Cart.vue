@@ -37,7 +37,6 @@ export default {
           console: "کامپیوتر",
           count: 2,
           price: 2000000,
-          off: 0,
           productCount: 2,
         },
         {
