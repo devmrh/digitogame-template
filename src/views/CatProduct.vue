@@ -4,7 +4,7 @@
       <div class="roow">
         <div class="cool-toolbar"><toolbar></toolbar></div>
         <div class="cool-content">
-          <my-header class="inview"></my-header>
+          <my-header></my-header>
           <div class="roow-sidebar roow-sidebar--mt40">
             <div class="cool-sidebar-list">
               <cat-product-sidebar
@@ -32,7 +32,7 @@
 </template>
 <script>
 import Application from "../components/Home/application.vue";
-import MyHeader from "../components/Header/my-header.vue";
+import MyHeader from "../components/Header/MyHeader.vue";
 import MyFooter from "../components/Footer/MyFooter.vue";
 import toolbar from "../components/Toolbar/toolbar.vue";
 import CatProductSidebar from "../components/CatProduct/CatProductSidebar.vue";
@@ -68,10 +68,10 @@ export default {
     return {
       activePage: 1,
       consoles: [
-        { name: "ایکس باکس", image: image1, colors: ["#00E1B3", "#C39500"] },
-        { name: "پلی استیشن", image: image2, colors: ["#2E6FD7", "#B91051"] },
+        { name: "ایکس باکس", image: image1, colors: ["#00E1B3", "#00C395"] },
+        { name: "پلی استیشن", image: image2, colors: ["#2E6FD7", "#1051B9"] },
         { name: "استیم", image: image3, colors: ["#FF00C7", "#E100A9"] },
-        { name: "گیفت کارت", image: image4, colors: ["#A16AEF", "#E6FD72"] },
+        { name: "گیفت کارت", image: image4, colors: ["#A16AEF", "#2E6FD7"] },
         { name: "کامپیوتر", image: image5, colors: ["#FF3A5E", "#FF6BCD"] },
         { name: "اوریجین", image: image6, colors: ["#FD6B63", "#DF4D45"] },
       ],

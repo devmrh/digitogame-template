@@ -1,9 +1,15 @@
 .content-user {
     &__wrapper {
         &__answer {
+            cursor: pointer;
             background: #25233b;
             border-radius: 15px;
             padding: 25px 26px 14px 20px;
+            margin-bottom: 20px;
+            &--closed {
+                opacity: 0.5;
+            }
+
             &__top {
                 display: flex;
                 align-items: center;
@@ -16,6 +22,18 @@
                     }
                 }
                 &__btn {
+                    &__status {
+                        background: #2e6fd7;
+                        border-radius: 10px;
+                        line-height: 40px !important;
+                        padding: 0 16px;
+                        &--answered {
+                            background: #2aaf8f;
+                        }
+                        &--closed {
+                            background: #fd6b63;
+                        }
+                    }
                     span {
                         display: block;
                         font-weight: 300;
@@ -29,29 +47,17 @@
                         &:first-child {
                             margin-bottom: 9px;
                         }
-                        &.color,
-                        &.color2,
-                        &.color3 {
-                            background: #2e6fd7;
-                            border-radius: 10px;
-                            line-height: 40px;
-                            padding: 0 16px;
-                        }
-                        &.color2 {
-                            background: #2aaf8f;
-                        }
-                        &.color3 {
-                            background: #fd6b63;
-                            color: #898894;
-                        }
                     }
                 }
             }
             &__text {
-                span {
+                p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     font-weight: 300;
                     font-size: 14px;
                     line-height: 21px;
+                    max-height: 42px;
                     color: #ffffff;
                 }
             }

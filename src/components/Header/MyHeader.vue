@@ -1,16 +1,22 @@
 <template>
-  <header class="main-header" id="top">
+  <div
+    class="modal-notification__background"
+    :style="{ opacity: notifActive ? '0.95' : '0', 'z-index': notifActive ? 5 : -5 }"
+    @click="toggleNotif"
+  ></div>
+
+  <header :class="{ 'main-header': true, 'main-header--user': isUserPanel }" id="top">
     <div class="main-header__wrapper">
       <div class="main-header__wrapper__login">
-        <div class="main-header__wrapper__login__image">
-          <a href="#"><img src="@/assets/img/avator.png" alt="" /></a>
-        </div>
-        <div class="main-header__wrapper__login__name">
-          <router-link to="/login">ورود یا ثبت نام</router-link>
-        </div>
+        <router-link to="login">
+          <img src="@/assets/img/avator.png" alt="" />
+          <p>ورود یا ثبت نام</p>
+        </router-link>
       </div>
       <div class="main-header__wrapper__notification">
-        <a href="#"
+        <notifications-modal :active="notifActive"></notifications-modal>
+
+        <a href="#" @click.prevent="toggleNotif"
           ><i class="dn-notification"
             ><span class="path1"></span><span class="path2"></span></i
         ></a>
@@ -39,14 +45,27 @@
 </template>
 
 <script>
+import NotificationsModal from "./NotificationsModal.vue";
 export default {
-  name: "my-header",
+  components: { NotificationsModal },
+  name: "MyHeader",
+  props: { isUserPanel: { default: false } },
   data() {
     return {
       searchPhrase: "",
+      notifActive: false,
     };
   },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
   methods: {
+    toggleNotif() {
+      this.notifActive = !this.notifActive;
+    },
+    onScroll() {
+      this.notifActive = false;
+    },
     search() {
       this.$router.push({
         path: "search-result?phrase",

@@ -6,7 +6,7 @@
           <toolbar></toolbar>
         </div>
         <div class="cool-content">
-          <my-header class="inview"></my-header>
+          <my-header></my-header>
           <home-intro></home-intro>
           <daily-offer></daily-offer>
           <bestselling-game></bestselling-game>
@@ -29,7 +29,7 @@ import DailyOffer from "../components/Home/daily-offer.vue";
 import HomeIntro from "../components/Home/home-intro.vue";
 import LatestBlog from "../components/Home/latest-blog.vue";
 import LatestGame from "../components/Home/latest-game.vue";
-import MyHeader from "../components/Header/my-header.vue";
+import MyHeader from "../components/Header/MyHeader.vue";
 import Coupon from "../components/Home/coupon.vue";
 import GiftCart from "../components/Home/gift-cart.vue";
 import MyFooter from "../components/Footer/MyFooter.vue";

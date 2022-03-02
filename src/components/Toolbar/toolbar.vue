@@ -19,7 +19,7 @@
           ></a>
         </li>
         <li>
-          <router-link to="#"
+          <router-link to="token-show"
             ><i class="dn-favorite-chart"
               ><span class="path1"></span><span class="path2"></span
               ><span class="path3"></span><span class="path4"></span></i
@@ -57,6 +57,7 @@ import toolbarContent from "./toolbar-content.vue";
 
 export default {
   components: { toolbarContent },
+
   name: "Toolbar",
   data() {
     return {
@@ -66,9 +67,16 @@ export default {
       inviewElement: undefined,
       toolbarHtml: "",
       lastScroll: 0,
+      scrolling: false,
+      scrollTimeout: undefined,
     };
   },
   mounted() {
+    setInterval(() => {
+      this.isClosing = false;
+      this.scrolling = false;
+      document.getElementsByTagName("body")[0].style.overflow = "visible";
+    }, 1000);
     this.lastScroll = document.documentElement.scrollTop;
     this.toolbarHtml = document.getElementById("toolbar-content");
     document.getElementById("toolbar-content").remove();
@@ -86,12 +94,11 @@ export default {
       if (this.isClosing) {
         return;
       }
-
       this.isClosing = true;
-
-      let toolbar = document.getElementById("toolbar-content");
       this.isActive = !this.isActive;
+
       if (!this.isActive) {
+        let toolbar = document.getElementById("toolbar-content");
         toolbar.style.height = 0;
         toolbar.style.paddingBottom = 0;
         setTimeout(() => {
@@ -99,45 +106,59 @@ export default {
           this.isClosing = false;
         }, 300);
       } else {
-        this.inviewElement.after(this.toolbarHtml);
-        toolbar = document.getElementById("toolbar-content");
+        this.inviewElement.before(this.toolbarHtml);
+        let toolbar = document.getElementById("toolbar-content");
         toolbar.style.height = `${toolbar.scrollHeight + 50}px`;
+        document.getElementsByTagName("body")[0].style.overflow = "hidden";
         setTimeout(() => {
           toolbar.style.paddingBottom = "50px";
+          document.getElementsByTagName("body")[0].style.overflow = "visible";
           this.isClosing = false;
           this.swiper.update();
           this.swiper.slideTo(0, 200, () => {});
+          toolbar.scrollIntoView({ behavior: "smooth" });
         }, 300);
+
+        this.scrolling = true;
       }
     },
 
     isOnScreen: function () {
+      let mVue = this;
+
+      clearTimeout(this.scrollTimeout);
+      this.scrollTimeout = setTimeout(function () {
+        if (mVue.scrolling) {
+          let toolbar = document.getElementById("toolbar-content");
+
+          if (mVue.isActive) {
+          }
+        }
+        mVue.scrolling = false;
+      }, 100);
       let winHeight = document.documentElement.scrollTop;
       let scrollDown = this.lastScroll < winHeight;
       let elements = document.getElementsByClassName("inview");
-      let mVue = this;
       let currentToolbar = document.getElementsByClassName("toolbar-content");
       if (currentToolbar.length > 0) {
         currentToolbar = currentToolbar[0];
         let curtop = currentToolbar.offsetTop + currentToolbar.offsetHeight;
-        console.log(
-          `winHeight is : ${winHeight},curTop is : ${currentToolbar.offsetHeight} , offtop : ${currentToolbar.offsetTop}`
-        );
         if (
-          (winHeight > 1000 &&
+          (winHeight > document.documentElement.winHeight &&
             winHeight < currentToolbar.offsetTop - currentToolbar.offsetHeight - 100 &&
             !scrollDown) ||
           curtop < winHeight
         ) {
-          this.isClosing = true;
-
-          mVue.isActive = false;
-          currentToolbar.style.height = 0;
-          currentToolbar.style.paddingBottom = 0;
-          setTimeout(() => {
-            currentToolbar.remove();
-            this.isClosing = false;
-          }, 300);
+          if (!mVue.scrolling) {
+            this.isClosing = true;
+            mVue.isActive = false;
+            currentToolbar.style.height = 0;
+            currentToolbar.style.paddingBottom = 0;
+            setTimeout(() => {
+              currentToolbar.remove();
+              this.isClosing = false;
+            }, 300);
+          }
         }
       }
       for (let i = 0; i < elements.length; i++) {
@@ -145,7 +166,6 @@ export default {
         let curtop = element.offsetTop + element.offsetHeight;
         if (curtop > winHeight) {
           mVue.inviewElement = element;
-
           break;
         }
       }
@@ -153,3 +173,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+[class^="dn-"] {
+  font-size: 30px;
+}
+</style>

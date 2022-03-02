@@ -4,7 +4,7 @@
       <div class="roow">
         <div class="cool-toolbar"><toolbar></toolbar></div>
         <div class="cool-content">
-          <my-header class="inview"></my-header>
+          <my-header></my-header>
           <section class="faq-content">
             <div class="faq-content__header">
               <div class="faq-content__header__title">
@@ -47,7 +47,7 @@
 <script>
 import Toolbar from "../components/Toolbar/toolbar.vue";
 import MyFooter from "../components/Footer/MyFooter.vue";
-import MyHeader from "../components/Header/my-header.vue";
+import MyHeader from "../components/Header/MyHeader.vue";
 import Application from "../components/Home/application.vue";
 import FaqLi from "../components/Faq/faq-li.vue";
 

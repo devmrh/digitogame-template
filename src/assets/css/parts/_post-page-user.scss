@@ -103,6 +103,7 @@
                     padding-right: 5px;
                     margin-bottom: 45px;
                     img {
+                        //edit
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
@@ -115,7 +116,7 @@
                     }
                 }
 
-                p {
+                > p {
                     font-weight: normal;
                     font-size: 20px;
                     line-height: 30px;
@@ -123,6 +124,37 @@
                     color: #ffffff;
                     margin-bottom: 50px;
                     padding-right: 7px;
+                }
+                &__quotation {
+                    background: rgba(255, 255, 255, 0.04);
+                    border-radius: 30px;
+                    padding: 33px 30px 33px 40px;
+                    margin-bottom: 60px;
+                    &__icon {
+                        > i {
+                            transform: rotateY(180deg);
+                            display: inline-block;
+                            font-size: 23px;
+                            margin-bottom: 14px;
+                        }
+                    }
+                    > p {
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #ffffff;
+                        margin-bottom: 0;
+                        padding-right: 0;
+                    }
+                    &__icon2 {
+                        text-align: end;
+
+                        i {
+                            // transform: rotateY(180deg);
+                            display: inline-block;
+                            font-size: 23px;
+                            margin-top: 14px;
+                        }
+                    }
                 }
 
                 &__game-ndustry {
@@ -183,9 +215,13 @@
                         ul {
                             display: flex;
                             align-items: center;
+                            flex-wrap: wrap;
+
                             li {
                                 margin-left: 11px;
                                 transition: 0.3s;
+                                margin-bottom: 25px;
+
                                 a {
                                     background: rgba(255, 255, 255, 0.05);
                                     border-radius: 5px;
@@ -198,7 +234,7 @@
                                     color: #ffffff;
                                 }
 
-                                &:last-child {
+                                &:nth-child(8n) {
                                     margin-left: 0;
                                 }
                                 &.active {
@@ -221,8 +257,6 @@
             }
         }
     }
-
- 
 }
 
 @media (max-width: 1200px) {
@@ -282,7 +316,7 @@
     }
 }
 
-@media (max-width:992px){
+@media (max-width: 992px) {
     .post-page-user {
         .roow {
             flex-direction: column;
@@ -307,7 +341,6 @@
             order: 2;
 
             .blog-sidebar {
-             
                 .cool-side-categories {
                     max-width: 100%;
                     margin-bottom: 450px;
@@ -350,7 +383,7 @@
     }
 }
 
- @media (max-width: 576px) {
+@media (max-width: 576px) {
     .post-page-user {
         &__cool-content {
             flex: 0 0 100%;
@@ -380,7 +413,7 @@
                         }
                     }
 
-                   p {
+                    p {
                         font-size: 14px;
                         margin-bottom: 30px;
                     }

@@ -1,0 +1,116 @@
+.modal-notification {
+    position: absolute;
+    z-index: 2;
+    width: 405px;
+    transition: 0.3s;
+    background: linear-gradient(180deg, #28253d 0%, rgba(40, 37, 61, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    padding: 12px 10px;
+    border-radius: 20px;
+    transform: translate(40%, 0%);
+    opacity: 0;
+    pointer-events: none;
+    &__background {
+        position: absolute;
+        transition: 0.3s;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 5;
+        background: rgba(9, 7, 31, 0.5);
+        backdrop-filter: blur(8px);
+    }
+    &__wrapper {
+        ul {
+            li {
+                a {
+                    width: 100%;
+                    border-radius: 10px;
+                    transition: 0.3s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 18px;
+                    p {
+                        margin-left: 5px;
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        line-height: 20px;
+                        font-size: 13px;
+                        font-weight: 400;
+                        position: relative;
+                        img {
+                            transition: 0.3s;
+                            margin-left: 16px;
+                            padding-left: 17px;
+                            border-left: 1px solid transparent;
+                            &:last-child {
+                                position: absolute;
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    > img {
+                        transition: 0.3s;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        background-color: #1e1b33;
+                        backdrop-filter: blur(20px);
+                        border-radius: 10px;
+                        p {
+                            img {
+                                border-color: #322f47;
+
+                                &:last-child {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        > img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        pointer-events: all;
+
+        transform: translate(40%, 25%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-notification {
+        &__wrapper {
+            ul {
+                li {
+                    a {
+                        padding: 10px;
+                        p {
+                            font-size: 12px;
+                            img {
+                                padding-left: 5px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .modal-notification {
+        width: 330px;
+
+        &.active {
+            transform: translate(15%, 25%);
+        }
+    }
+}

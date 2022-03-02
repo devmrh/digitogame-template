@@ -1,5 +1,5 @@
 <template>
-  <section class="application">
+  <section class="application inview">
     <div class="container">
       <div class="application__wrapper">
         <div class="application__wrapper__image">

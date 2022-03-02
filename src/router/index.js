@@ -13,6 +13,9 @@ import Signup from '../views/Signup.vue'
 import AmazingSales from '../views/AmazingSales.vue'
 import SearchResult from '../views/SearchResult.vue'
 import NotFound from '../views/NotFound.vue'
+import UserPanel from '../views/UserPanel.vue'
+import SingleBlog from '../views/SingleBlog.vue'
+import TokenShow from '../views/TokenShow.vue'
 
 
 const routes = [
@@ -72,16 +75,32 @@ const routes = [
     component: Signup
   },
   {
+    path: '/token-show',
+    name: 'TokenShow',
+    component: TokenShow
+
+  },
+  {
     path: '/amazing-sales',
     name: 'AmazingSales',
     component: AmazingSales
+  },
+  {
+    path: '/user-panel',
+    name: 'UserPanel',
+    component: UserPanel
   },
   {
     path: '/search-result',
     name: 'SearchResult',
     props: true,
     component: SearchResult
-
+  },
+  {
+    path: '/single-blog',
+    name: 'SingleBlog',
+    props: true,
+    component: SingleBlog
   },
 
   {

@@ -4,8 +4,8 @@
       <div class="roow">
         <div class="cool-toolbar"><toolbar></toolbar></div>
         <div class="cool-content">
-          <my-header class="inview"></my-header>
-          <section class="screen">
+          <my-header></my-header>
+          <section class="screen inview">
             <div class="screen__background">
               <img :src="image" alt="" />
             </div>
@@ -23,7 +23,7 @@
 <script>
 import Toolbar from "../components/Toolbar/toolbar.vue";
 import MyFooter from "../components/Footer/MyFooter.vue";
-import MyHeader from "../components/Header/my-header.vue";
+import MyHeader from "../components/Header/MyHeader.vue";
 import Application from "../components/Home/application.vue";
 import image from "../assets/img/Pic.png";
 import PurchaseKeys from "../components/PurchaseScreen/purchase-keys.vue";

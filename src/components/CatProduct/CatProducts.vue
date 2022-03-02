@@ -10,7 +10,7 @@
           :name="item.name"
           :price="item.price"
           :url="item.url"
-          :class="{ inview: (i + 1) % 4 == 0 }"
+          :class="{ inview: i % rowCount == 0 }"
         ></single-product>
       </div>
     </div>
@@ -21,5 +21,28 @@ import SingleProduct from "../SingleProduct.vue";
 export default {
   components: { SingleProduct },
   props: ["items"],
+  data() {
+    return {
+      rowCount: 3,
+    };
+  },
+  methods: {
+    onResize() {
+      let innerWidth = window.innerWidth;
+      if (innerWidth < 576) {
+        this.rowCount = 1;
+      } else if (innerWidth < 768) {
+        this.rowCount = 2;
+      } else if (innerWidth < 992) {
+        this.rowCount = 3;
+      } else {
+        this.rowCount = 4;
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+    this.onResize();
+  },
 };
 </script>

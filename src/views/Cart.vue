@@ -4,7 +4,7 @@
       <div class="roow">
         <div class="cool-toolbar"><toolbar></toolbar></div>
         <div class="cool-content">
-          <my-header class="inview"></my-header>
+          <my-header></my-header>
           <div class="roow-sidebar roow-sidebar">
             <div class="cool-context-cart">
               <cart-products :items="products"></cart-products>
@@ -20,7 +20,7 @@
 </template>
 <script>
 import Application from "../components/Home/application.vue";
-import MyHeader from "../components/Header/my-header.vue";
+import MyHeader from "../components/Header/MyHeader.vue";
 import MyFooter from "../components/Footer/MyFooter.vue";
 import toolbar from "../components/Toolbar/toolbar.vue";
 import CartProducts from "../components/Cart/CartProducts.vue";

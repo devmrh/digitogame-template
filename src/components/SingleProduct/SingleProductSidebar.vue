@@ -40,30 +40,6 @@ export default {
           name: "ژانر",
           desc: "اکشن",
         },
-        {
-          name: "ریجن",
-          desc: "آزاد-آرژانتین",
-        },
-        {
-          name: "تاریخ انتشار",
-          desc: "۸۲ آبان ۰۰۴۱",
-        },
-        {
-          name: "امتیاز",
-          desc: "4.8 از ۵",
-        },
-        {
-          name: "تحویل",
-          desc: "فوری",
-        },
-        {
-          name: "زبان",
-          desc: "انگلیسی - روسی",
-        },
-        {
-          name: "هدیه",
-          desc: "دارد",
-        },
       ],
       similar: [
         {
@@ -95,3 +71,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.single-product-sidebar {
+  position: sticky;
+  bottom: 0;
+  top: 0;
+}
+</style>

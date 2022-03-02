@@ -1,5 +1,6 @@
 <template>
   <section class="login">
+    <div class="bg"></div>
     <div class="container">
       <div :class="{ login__wrapper: true, code: hasSentCode }">
         <div class="login__wrapper__content">
@@ -207,3 +208,16 @@ export default {
   },
 };
 </script>
+<style scoped>
+.bg {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+ background: url('../assets/img/bg-login.jpg');
+ opacity: 1%;
+
+}
+
+</style>

@@ -1,8 +1,8 @@
 <template>
   <section class="contactus">
     <div class="contactus__wrapper">
-      <div class="roow">
-        <div class="cool-3">
+      <div :class="{ roow: true, inview: screenSize > 992 }">
+        <div :class="{ 'cool-3': true, inview: screenSize > 768 }">
           <div class="contactus__wrapper__list">
             <ul>
               <contact-cart
@@ -13,13 +13,14 @@
                 :topic="item.topic"
                 :text="item.text"
                 :icon="item.icon"
+                :class="{ inview: screenSize < 768 }"
                 @click="onCartClicked(i)"
               ></contact-cart>
             </ul>
           </div>
         </div>
         <div class="cool-9">
-          <div class="contactus__wrapper__item">
+          <div :class="{ contactus__wrapper__item: true, inview: screenSize < 992 }">
             <contact-text
               :contactText="items[activeId].contactText"
               :contactTopic="items[activeId].contactTopic"
@@ -31,7 +32,6 @@
     </div>
   </section>
 </template>
-activeId
 
 <script>
 import contactCart from "./contact-cart.vue";
@@ -40,6 +40,10 @@ import ContactText from "./contact-text.vue";
 export default {
   components: { contactCart, ContactText, ContactForm },
   name: "innerContact",
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+    this.onResize();
+  },
   methods: {
     onInputChanged: function (data) {
       if (data.name == "name") {
@@ -49,6 +53,10 @@ export default {
       } else if (data.name == "ticketText") {
         this.ticketText = data.text;
       }
+    },
+    onResize() {
+      this.screenSize = window.innerWidth;
+      console.log(this.screenSize);
     },
     onCartClicked(id) {
       this.activeId = id;
@@ -60,7 +68,7 @@ export default {
       name: "",
       email: "",
       ticketText: "",
-
+      screenSize: 993,
       items: [
         {
           contactTopic: "آدرس",

@@ -1,36 +1,29 @@
-.token-header
-{
+.token-header {
     margin-bottom: 38px;
-    &__wrapper
-    {
-        background-color:$green;
+    &__wrapper {
+        background-color: $green;
         box-shadow: 0 10px 45px 10px rgba(0, 255, 133, 0.05);
         border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding:12.5px 20px;
-        &__text
-        {
+        padding: 12.5px 20px;
+        &__text {
             display: flex;
             align-items: center;
-            i
-            {
+            i {
                 font-size: 25px;
                 margin-left: 13px;
             }
-            p
-            {
+            p {
                 color: #fff;
                 font-size: 17px;
                 font-weight: 300;
                 line-height: 25px;
             }
         }
-        &__number
-        {
-            span
-            {
+        &__number {
+            span {
                 display: flex;
                 align-items: center;
                 text-align: left;
@@ -38,13 +31,29 @@
                 font-size: 17px;
                 font-weight: 700;
                 color: #fff;
-                small
-                {
+                small {
                     order: 1;
                     font-size: 100%;
-
                 }
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .token-header {
+        &__wrapper {
+            flex-direction: column;
+            padding: 12px;
+            &__text {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .token-header {
+        margin-bottom: 30px;
     }
 }

@@ -3,6 +3,7 @@
     &__wrapper {
         &__row {
             display: flex;
+            margin-bottom: 20px;
             &__col-small {
                 flex: 0 0 285px;
                 width: 285px;
@@ -50,20 +51,21 @@
                                 justify-content: center;
                                 background-color: rgba(196, 196, 196, 0.05);
                                 border-radius: 8px;
-                                line-height: 40px;
+                                line-height: 18px;
                                 font-size: 15px;
                                 font-weight: 500;
                                 color: #fff;
                                 flex: 0 0 calc(50% - 10px);
                                 margin: 0 5px;
-                                padding: 0 13px;
+                                padding: 11px 13px;
                                 img {
                                     margin-right: 10px;
-                                    width: 20px;
-                                    height: 20px;
+                                    width: 18px;
+                                    height: 18px;
                                 }
-                                i {
+                                > i {
                                     margin-right: 10px;
+                                    font-size: 18px;
                                 }
                             }
                         }
@@ -71,19 +73,14 @@
                     &__chart {
                         background-color: #17142c;
                         border-radius: 15px;
-                        padding: 10px 12px 24px 12px;
+                        padding: 10px 12px;
                         margin-bottom: 26px;
                         &__title {
+                            margin-bottom: 15px;
                             p {
                                 font-size: 12px;
                                 font-weight: 300;
                                 color: #fff;
-                            }
-                        }
-                        &__nemodar {
-                            #Chart {
-                                // width: 250px;
-                                // height:115px;
                             }
                         }
                     }
@@ -110,14 +107,41 @@
                 &__chart {
                     background-color: #26233b;
                     border-radius: 25px;
-                    padding: 35px 45px 10px 33px;
-                    #myChart
-                    {
-                        height: 310px;
-                        
+                    padding: 15px;
+                    div {
+                        height: 100%;
                     }
                 }
             }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .token {
+        &__wrapper {
+            &__row {
+                flex-wrap: wrap;
+                &__col-small {
+                    flex: 0 0 100%;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                &__col-big {
+                    flex: 0 0 100%;
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .token {
+        margin-bottom: 30px;
     }
 }

@@ -25,28 +25,23 @@
 @import "parts/game";
 @import "parts/comment";
 @import "parts/application";
-
-
+@import "parts/modal-notification";
 
 //terms
 @import "parts/terms-content";
-
 
 //blog-pages
 @import "parts/blog-content";
 @import "parts/slidebar-blog";
 @import "parts/post-page-user";
 @import "parts/post-page-user-comments";
-@import "parts/post-page-user-sidebar.scss";
-
+@import "parts/post-page-user-sidebar";
 
 //login
 @import "parts/login";
 
-
 //contactus
 @import "parts/contactus";
-
 
 //single-product
 @import "parts/single-product-sidebar";
@@ -89,3 +84,8 @@
 @import "parts/answer";
 @import "parts/conversation";
 @import "parts/dashboard";
+
+//stream
+@import "parts/stream-slider";
+@import "parts/stream-product";
+@import "parts/stream-video";

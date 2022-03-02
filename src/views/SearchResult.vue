@@ -4,7 +4,7 @@
       <div class="roow">
         <div class="cool-toolbar"><toolbar></toolbar></div>
         <div class="cool-content">
-          <my-header class="inview"></my-header>
+          <my-header></my-header>
           <search-result-header
             :searchPhrase="this.$route.query.phrase"
           ></search-result-header>
@@ -23,7 +23,7 @@
 </template>
 <script>
 import Application from "../components/Home/application.vue";
-import MyHeader from "../components/Header/my-header.vue";
+import MyHeader from "../components/Header/MyHeader.vue";
 import MyFooter from "../components/Footer/MyFooter.vue";
 import toolbar from "../components/Toolbar/toolbar.vue";
 import Pagination from "../components/Pagination.vue";

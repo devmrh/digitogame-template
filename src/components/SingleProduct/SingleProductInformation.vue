@@ -38,14 +38,14 @@
           >افزودن به سبد خرید</a
         >
       </div>
-      <div class="single-product-sidebar__wrapper__item__actions__btn-support">
+      <!-- <div class="single-product-sidebar__wrapper__item__actions__btn-support">
         <a href="#"
           ><i class="dn-message-question"
             ><span class="path1"></span><span class="path2"></span
             ><span class="path3"></span></i
           >تماس با پشتیبانی</a
         >
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

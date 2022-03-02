@@ -1,5 +1,4 @@
 .content-user {
-    margin-bottom: 50px;
     display: none;
 
     &.active {
@@ -37,6 +36,7 @@
                     color: #ffffff;
                 }
                 &--color {
+                    cursor: pointer;
                     background: #7200e3;
                 }
             }
@@ -148,7 +148,7 @@
                             span {
                                 line-height: 15px;
                                 font-size: 14px;
-                                &:last-child{
+                                &:last-child {
                                     line-height: 48px;
                                 }
                             }
@@ -174,7 +174,6 @@
                         }
                     }
                 }
-               
             }
         }
     }
