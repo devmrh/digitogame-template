@@ -74,7 +74,6 @@ export default {
   mounted() {
     setInterval(() => {
       this.isClosing = false;
-      this.scrolling = false;
       document.getElementsByTagName("body")[0].style.overflow = "visible";
     }, 1000);
     this.lastScroll = document.documentElement.scrollTop;
@@ -85,6 +84,14 @@ export default {
   created() {
     this.isOnScreen();
     window.addEventListener("scroll", this.isOnScreen);
+    window.addEventListener("scroll", () => {
+      let mVue = this;
+
+      clearTimeout(this.scrollTimeout);
+      this.scrollTimeout = setTimeout(function () {
+        mVue.scrolling = false;
+      }, 310);
+    });
   },
   methods: {
     setSwiper: function (swiper) {
@@ -125,17 +132,6 @@ export default {
 
     isOnScreen: function () {
       let mVue = this;
-
-      clearTimeout(this.scrollTimeout);
-      this.scrollTimeout = setTimeout(function () {
-        if (mVue.scrolling) {
-          let toolbar = document.getElementById("toolbar-content");
-
-          if (mVue.isActive) {
-          }
-        }
-        mVue.scrolling = false;
-      }, 100);
       let winHeight = document.documentElement.scrollTop;
       let scrollDown = this.lastScroll < winHeight;
       let elements = document.getElementsByClassName("inview");
@@ -144,19 +140,19 @@ export default {
         currentToolbar = currentToolbar[0];
         let curtop = currentToolbar.offsetTop + currentToolbar.offsetHeight;
         if (
-          (winHeight > document.documentElement.winHeight &&
-            winHeight < currentToolbar.offsetTop - currentToolbar.offsetHeight - 100 &&
-            !scrollDown) ||
-          curtop < winHeight
+          document.documentElement.scrollTop > curtop + 300 ||
+          document.documentElement.scrollTop < currentToolbar.offsetTop - 300
         ) {
+          console.log(this.scrolling);
           if (!mVue.scrolling) {
+            console.log(curtop);
             this.isClosing = true;
-            mVue.isActive = false;
+            this.isActive = false;
             currentToolbar.style.height = 0;
             currentToolbar.style.paddingBottom = 0;
             setTimeout(() => {
               currentToolbar.remove();
-              this.isClosing = false;
+              mVue.isClosing = false;
             }, 300);
           }
         }
@@ -165,7 +161,7 @@ export default {
         let element = elements[i];
         let curtop = element.offsetTop + element.offsetHeight;
         if (curtop > winHeight) {
-          mVue.inviewElement = element;
+          this.inviewElement = element;
           break;
         }
       }

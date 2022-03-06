@@ -355,7 +355,7 @@
             flex-direction: column;
             &__total-content {
                 flex: unset;
-                width: unset;
+                width: 100%;
                 margin-left: 0;
                 order: 2;
             }
@@ -367,17 +367,15 @@
                 &__img {
                     width: 400px;
 
-                    &__text{
+                    &__text {
                         margin-right: 4px;
                         margin-left: 4px;
                     }
                     &__user {
                         &__data {
-                
                             right: 4px;
                         }
                         &__date {
-                     
                             left: 4px;
                         }
                     }
@@ -412,7 +410,6 @@
                             right: 7px;
                         }
                         &__date {
-                      
                             left: 8px;
                         }
                     }
@@ -424,7 +421,7 @@
             flex-direction: column;
             &__total-content {
                 flex: unset;
-                width: unset;
+                width: 100%;
                 margin-left: 0;
                 order: 2;
             }
@@ -445,11 +442,9 @@
                     }
                     &__user {
                         &__data {
-                      
                             right: 3px;
                         }
                         &__date {
-                     
                             left: 3px;
                         }
                     }
@@ -477,7 +472,6 @@
                     }
                     &__user {
                         &__data {
-                    
                             padding: 10px 26px;
                             right: 20px;
                             max-width: 180px;
@@ -493,7 +487,6 @@
                             }
                         }
                         &__date {
-                       
                             padding: 14px 26px;
                             left: 20px;
                             max-width: 160px;
@@ -522,20 +515,16 @@
                 &__img {
                     &__user {
                         &__data {
-                         
                             max-width: 150px;
                             right: 10px;
-                     
                         }
                         &__date {
-                     
                             max-width: 140px;
                             left: 10px;
-                         
                         }
                     }
 
-                    &__text{
+                    &__text {
                         right: 10px;
                         left: 10px;
                     }

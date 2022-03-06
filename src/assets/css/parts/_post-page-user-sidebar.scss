@@ -5,7 +5,6 @@
         .cool-side-categories {
             flex: 0 0 265px;
             max-width: 265px;
-            width: 265px;
             background: linear-gradient(180deg, #27243c 0%, rgba(39, 36, 60, 0.5) 100%, rgba(39, 36, 60, 0.5) 100%);
             border-radius: 20px;
             padding: 0 20px 11px 20px;
@@ -63,14 +62,10 @@
                 &__menu-saidebar {
                     ul {
                         li {
-                            transition: .3s;
                             position: relative;
                             margin-bottom: 10px;
                             a {
                                 @include absolute(0, 0, 0, 0);
-                            }
-                            &:hover{
-                                transform: scale(1.1);
                             }
                         }
                     }
@@ -127,27 +122,11 @@
 
             .cool-side-categories {
                 margin-bottom: 30px;
-                flex: 0 0 100%;
-                max-width: 100%;
+
+                flex: 0 0 50%;
+                max-width: 50%;
                 &--margin {
                     margin-bottom: 0;
-                }
-                &__content {
-                    &__menu-saidebar {
-                        ul {
-                            display: flex;
-                            flex-wrap: wrap;
-                            text-align: center;
-                            justify-content: space-between;
-                            column-count: 2;
-                            li {
-                                max-width: 49%;
-                                &:nth-child(2n - 1) {
-                                    margin-left: 10px;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -156,24 +135,25 @@
 
 @media (max-width: 768px) {
     .cool-slidebar {
-        justify-content: center;
-        flex: 0 0 100%;
-        width: 100%;
         .blog-sidebar {
-            .cool-side-categories {
-                margin-left: 0;
-                width: 100%;
-            }
             &--user {
                 margin-bottom: 0;
             }
         }
     }
+}
+
+@media (max-width: 576px) {
     .cool-slidebar {
+        justify-content: center;
+        flex: 0 0 100%;
+        width: 100%;
+
         .blog-sidebar {
             .cool-side-categories {
                 margin-left: 0;
-                width: 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
                 &__content {
                     &__menu-saidebar {
                         ul {
@@ -181,7 +161,6 @@
                             flex-wrap: nowrap;
                             flex-direction: column;
                             li {
-                                max-width: 100%;
                                 &:nth-child(2n - 1) {
                                     margin-left: 0;
                                 }

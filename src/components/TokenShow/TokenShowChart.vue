@@ -1,5 +1,5 @@
 <template>
-  <div class="token__wrapper__row">
+  <div :class="{ token__wrapper__row: true, inview: !isSmall }">
     <div :class="{ 'token__wrapper__row__col-small': true, inview: isSmall }">
       <div class="token__wrapper__row__col-small__item" ref="miniDiv">
         <div class="token__wrapper__row__col-small__item__title">
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <div class="token__wrapper__row__col-big inview">
+    <div :class="{ 'token__wrapper__row__col-big': true, inview: isSmall }">
       <div class="token__wrapper__row__col-big__chart" ref="myBig">
         <div :id="chartId"></div>
       </div>

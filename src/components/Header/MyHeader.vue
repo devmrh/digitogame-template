@@ -30,7 +30,7 @@
             ></i>
           </button>
         </form>
-        <a href="#" data-toggle="openbox" data-target="search" data-status="false"
+        <a href="#" @click.prevent="searchMobileActive = true"
           ><i class="dn-search"><span class="path1"></span><span class="path2"></span></i
         ></a>
       </div>
@@ -42,24 +42,35 @@
       </div>
     </div>
   </header>
+  <search-mobile
+    :active="searchMobileActive"
+    @close="searchMobileActive = false"
+    @change="onChange"
+    @search="search"
+  ></search-mobile>
 </template>
 
 <script>
 import NotificationsModal from "./NotificationsModal.vue";
+import SearchMobile from "./SearchMobile.vue";
 export default {
-  components: { NotificationsModal },
+  components: { NotificationsModal, SearchMobile },
   name: "MyHeader",
   props: { isUserPanel: { default: false } },
   data() {
     return {
       searchPhrase: "",
       notifActive: false,
+      searchMobileActive: false,
     };
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
   },
   methods: {
+    onChange(i) {
+      this.searchPhrase = i;
+    },
     toggleNotif() {
       this.notifActive = !this.notifActive;
     },
@@ -67,6 +78,7 @@ export default {
       this.notifActive = false;
     },
     search() {
+      this.searchMobileActive = false;
       this.$router.push({
         path: "search-result?phrase",
         query: { phrase: this.searchPhrase },

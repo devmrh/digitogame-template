@@ -11,7 +11,7 @@
           :price="item.price"
           :url="item.url"
           :off="item.off"
-          :class="{ inview: (i + 1) % 5 == 0 }"
+          :class="{ inview: i % rowCount == 0 }"
         ></single-product>
       </div>
     </div>
@@ -23,5 +23,28 @@ export default {
   components: { SingleProduct },
   name: "AmazingSalesProducts",
   props: ["items"],
+  data() {
+    return {
+      rowCount: 5,
+    };
+  },
+  methods: {
+    onResize() {
+      let innerWidth = window.innerWidth;
+      if (innerWidth < 481) {
+        this.rowCount = 1;
+      } else if (innerWidth < 768) {
+        this.rowCount = 2;
+      }else if (innerWidth < 1200) {
+        this.rowCount = 3;
+      } else {
+        this.rowCount = 5;
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+    this.onResize();
+  },
 };
 </script>
